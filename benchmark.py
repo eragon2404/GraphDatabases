@@ -1,107 +1,12 @@
 import sys
 import os
 import threading
-from logging import basicConfig, info, error, DEBUG, INFO
+#from logging import basicConfig, info, error, DEBUG, INFO, getLogger
+import logging
 import psutil
-from neo4j import GraphDatabase
 import time
 import datetime
-
-
-class GraphDriver:
-    def __init__(self):
-        self._suppressed = False
-
-    def add_node(self, nid: int, labels: list[str], properties: dict):
-        raise NotImplementedError
-
-    def add_edge(self, src: str, dst: str, labels: list[str], properties: dict):
-        raise NotImplementedError
-
-    def get_single_node(self, labels: list[str], properties: dict):
-        raise NotImplementedError
-
-    def load_database(self, path_nodes: str, path_edges: str):
-        raise NotImplementedError
-
-    def get_pids(self):
-        raise NotImplementedError
-
-    def enter_suppression(self):
-        self._suppressed = True
-
-    def exit_suppression(self):
-        self._suppressed = False
-
-
-class NEO4j(GraphDriver):
-
-    def __init__(self, uri, user, password):
-        super().__init__()
-        self.driver = GraphDatabase.driver(uri, auth=(user, password))
-        info(f"Neo4j driver connected to {uri}")
-
-    def add_node(self, nid: int, labels: list[str], properties: dict):
-        properties.update({"id": nid})
-        q = "CREATE (n"
-        if labels:
-            q += ":" + ":".join(labels)
-        q += " {"
-        q += ", ".join([f"{k}: \"{v}\"" for k, v in properties.items()])
-        q += "}"
-        q += ")"
-        self.query(q)
-
-    def add_edge(self, src: str, dst: str, labels: list[str], properties: dict):
-        q = f"MATCH (a), (b) WHERE a.id = \"{src}\" AND b.id = \"{dst}\" CREATE (a)-[:"
-        if labels:
-            q += ":".join(labels)
-        q += " {"
-        q += ", ".join([f"{k}: \"{v}\"" for k, v in properties.items()])
-        q += "}"
-        q += "]->(b)"
-        self.query(q)
-
-    def get_single_node(self, labels: list[str], properties: dict):
-        q = "MATCH (n"
-        if labels:
-            q += ":" + ":".join(labels)
-        q += " {"
-        q += ", ".join([f"{k}: {v}" for k, v in properties.items()])
-        q += "}"
-        q += ") RETURN n"
-        return self.query(q)
-
-    def load_database(self, path_nodes: str, path_edges: str):
-        with open(path_nodes, "r") as f:
-            n_properties = f.readline().strip().split(",")
-        with open(path_edges, "r") as f:
-            e_properties = f.readline().strip().split(",")
-        self.query(f"LOAD CSV WITH HEADERS FROM 'file:///{path_nodes}' AS row "
-                   f"CREATE (n {{ {', '.join([f'{p}: row.{p}' for p in n_properties])} }})")
-        self.query(f"LOAD CSV WITH HEADERS FROM 'file:///{path_edges}' AS row "
-                   f"MATCH (a), (b) WHERE a.id = row.src AND b.id = row.dst "
-                   f"CREATE (a)-[:{':'.join(e_properties)}]->(b)")
-
-    def close(self):
-        self.driver.close()
-
-    def query(self, q):
-        with self.driver.session() as session:
-            res = None
-            if not self._suppressed:
-                res = session.run(q)
-            return res
-
-    def clear(self):
-        self.query("MATCH (n) DETACH DELETE n")
-
-    def get_pids(self):
-        return [p.pid for p in psutil.process_iter() if p.name() == "java.exe" and
-                "Neo4j Desktop.exe" in [pp.name() for pp in p.parents()]]
-
-    def __str__(self):
-        return "NEO4j_DB"
+from databases import GraphDriver, NEO4j, ArangoDB
 
 
 class Suppress:
@@ -150,7 +55,7 @@ class Profiler:
             mem = 0
             for pid in self._pids:
                 p = psutil.Process(pid)
-                cpu += p.cpu_percent(interval=self._interval)
+                cpu += p.cpu_percent(interval=1)
                 mem += p.memory_info().rss
             self._cpu_usage.append(cpu)
             self._memory_usage.append(mem)
@@ -185,7 +90,7 @@ def bench_add_database(database: GraphDriver, path_node: str, path_edge: str):
         database.load_database(path_node, path_edge)
 
 
-def bench_get_single_node(database: GraphDriver, size=1000000):
+def bench_get_single_node(database: GraphDriver, size=1000):
     info(f"Getting {size} nodes from {database}")
     for i in range(size):
         if database:
@@ -199,7 +104,6 @@ def perform_bench(bench: callable, database, **kwargs):
         bench(database, **kwargs)
     end = time.time()
     overhead = end - start
-    print(f"Overhead: {overhead}")
     info(f"Overhead is {overhead}")
 
     profiler = Profiler(database, 0.1)
@@ -208,14 +112,16 @@ def perform_bench(bench: callable, database, **kwargs):
     end = time.time()
     profiler.stop()
     duration = end - start - overhead
-    info(f"Benchmark {bench.__name__} with {database} finished in {end - start}")
-    print(profiler.get_summary())
+    info(f"Benchmark {bench.__name__} with {database} finished in {duration}")
+    info(profiler.get_summary())
     save_data(f"{bench.__name__}_{database}", profiler.get_cpu_usage(), profiler.get_memory_usage(), duration, 0.1)
 
 
 def save_data(name, cpu_usage, memory_usage, duration, interval):
     timestamp = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-    with open(f"Results/{name}_{timestamp}.bench", "w") as f:
+    name = f"Results/{name}_{timestamp}.bench"
+    info(f"Saving data to {name}")
+    with open(name, "w") as f:
         f.write(f"time:{duration}\n")
         f.write("#Time,CPU,Memory\n")
         for i in range(len(cpu_usage)):
@@ -223,8 +129,26 @@ def save_data(name, cpu_usage, memory_usage, duration, interval):
 
 
 if __name__ == "__main__":
-    basicConfig(filename="benchmark.log", level=INFO, format="%(asctime)s - %(levelname)s - %(message)s")
-    d_neo4j = NEO4j("bolt://localhost:7687", "neo4j", "1234")
-    d_neo4j.clear()
+    logging.basicConfig(filename="benchmark.log", level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
+    info = logging.info
+    error = logging.error
+    logging.getLogger().addHandler(logging.StreamHandler(sys.stdout))
+    try:
+        d_neo4j = NEO4j("bolt://localhost:7687", "neo4j", "1234")
+        d_neo4j.clear()
+    except Exception as e:
+        error(f"Could not connect to Neo4j: {e}")
+        exit(1)
+    try:
+        d_arango = ArangoDB("http://localhost:8529", "root", "arango")
+        d_arango.clear()
+    except Exception as e:
+        error(f"Could not connect to ArangoDB: {e}")
+        exit(1)
+
     perform_bench(bench_add_single_node, d_neo4j)
+    perform_bench(bench_add_single_node, d_arango)
     perform_bench(bench_add_single_edge, d_neo4j)
+    perform_bench(bench_add_single_edge, d_arango)
+    perform_bench(bench_get_single_node, d_neo4j)
+    perform_bench(bench_get_single_node, d_arango)

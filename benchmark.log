@@ -180,3 +180,266 @@
 2022-11-14 18:26:19,819 - INFO - Adding 1000 edges to NEO4j_DB
 2022-11-14 18:26:29,388 - INFO - Profiler stopped
 2022-11-14 18:26:29,388 - INFO - Benchmark bench_add_single_edge with NEO4j_DB finished in 9.557981014251709
+2022-11-15 16:27:01,055 - INFO - Neo4j driver connected to bolt://localhost:7687
+2022-11-15 16:28:47,413 - INFO - Neo4j driver connected to bolt://localhost:7687
+2022-11-15 16:28:51,480 - ERROR - Could not connect to Neo4j: Couldn't connect to localhost:7687 (resolved to ()):
+Failed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7687)) (reason [WinError 10061] Es konnte keine Verbindung hergestellt werden, da der Zielcomputer die Verbindung verweigerte)
+Failed to establish connection to ResolvedIPv6Address(('::1', 7687, 0, 0)) (reason [WinError 10061] Es konnte keine Verbindung hergestellt werden, da der Zielcomputer die Verbindung verweigerte)
+2022-11-15 16:29:38,634 - INFO - Neo4j driver connected to bolt://localhost:7687
+2022-11-15 16:29:39,203 - INFO - Starting benchmark bench_add_single_node with NEO4j_DB
+2022-11-15 16:29:39,203 - INFO - Entering suppression mode for NEO4j_DB
+2022-11-15 16:29:39,203 - INFO - Adding 10000 nodes to NEO4j_DB
+2022-11-15 16:29:39,337 - INFO - Exiting suppression mode for NEO4j_DB
+2022-11-15 16:29:39,337 - INFO - Overhead is 0.13319015502929688
+2022-11-15 16:29:39,606 - INFO - Profiler initialized for NEO4j_DB with pids [16096, 21940]
+2022-11-15 16:29:39,608 - INFO - Profiler started
+2022-11-15 16:29:39,608 - INFO - Adding 10000 nodes to NEO4j_DB
+2022-11-15 16:30:06,756 - INFO - Profiler stopped
+2022-11-15 16:30:06,756 - INFO - Benchmark bench_add_single_node with NEO4j_DB finished in 26.82819700241089
+2022-11-15 16:30:06,758 - INFO - Starting benchmark bench_add_single_edge with NEO4j_DB
+2022-11-15 16:30:06,758 - INFO - Entering suppression mode for NEO4j_DB
+2022-11-15 16:30:06,758 - INFO - Adding 1000 edges to NEO4j_DB
+2022-11-15 16:30:06,771 - INFO - Exiting suppression mode for NEO4j_DB
+2022-11-15 16:30:06,771 - INFO - Overhead is 0.013025283813476562
+2022-11-15 16:30:07,069 - INFO - Profiler initialized for NEO4j_DB with pids [16096, 21940]
+2022-11-15 16:30:07,069 - INFO - Profiler started
+2022-11-15 16:30:07,070 - INFO - Adding 1000 edges to NEO4j_DB
+2022-11-15 16:30:18,201 - INFO - Profiler stopped
+2022-11-15 16:30:18,201 - INFO - Benchmark bench_add_single_edge with NEO4j_DB finished in 10.955551147460938
+2022-11-15 16:30:18,202 - INFO - Starting benchmark bench_get_single_node with NEO4j_DB
+2022-11-15 16:30:18,202 - INFO - Entering suppression mode for NEO4j_DB
+2022-11-15 16:30:18,202 - INFO - Getting 10000 nodes from NEO4j_DB
+2022-11-15 16:30:18,321 - INFO - Exiting suppression mode for NEO4j_DB
+2022-11-15 16:30:18,321 - INFO - Overhead is 0.11934018135070801
+2022-11-15 16:30:18,561 - INFO - Profiler initialized for NEO4j_DB with pids [16096, 21940]
+2022-11-15 16:30:18,561 - INFO - Profiler started
+2022-11-15 16:30:18,561 - INFO - Getting 10000 nodes from NEO4j_DB
+2022-11-15 16:31:28,588 - INFO - Neo4j driver connected to bolt://localhost:7687
+2022-11-15 16:31:28,710 - INFO - Starting benchmark bench_add_single_node with NEO4j_DB
+2022-11-15 16:31:28,710 - INFO - Entering suppression mode for NEO4j_DB
+2022-11-15 16:31:28,710 - INFO - Adding 10000 nodes to NEO4j_DB
+2022-11-15 16:31:28,838 - INFO - Exiting suppression mode for NEO4j_DB
+2022-11-15 16:31:28,839 - INFO - Overhead is 0.12814116477966309
+2022-11-15 16:31:29,227 - INFO - Profiler initialized for NEO4j_DB with pids [16096, 21940]
+2022-11-15 16:31:29,228 - INFO - Profiler started
+2022-11-15 16:31:29,228 - INFO - Adding 10000 nodes to NEO4j_DB
+2022-11-15 16:31:45,948 - INFO - Profiler stopped
+2022-11-15 16:31:45,948 - INFO - Benchmark bench_add_single_node with NEO4j_DB finished in 16.68334698677063
+2022-11-15 16:31:45,949 - INFO - Starting benchmark bench_add_single_edge with NEO4j_DB
+2022-11-15 16:31:45,949 - INFO - Entering suppression mode for NEO4j_DB
+2022-11-15 16:31:45,949 - INFO - Adding 1000 edges to NEO4j_DB
+2022-11-15 16:31:45,961 - INFO - Exiting suppression mode for NEO4j_DB
+2022-11-15 16:31:45,961 - INFO - Overhead is 0.012012481689453125
+2022-11-15 16:31:46,255 - INFO - Profiler initialized for NEO4j_DB with pids [16096, 21940]
+2022-11-15 16:31:46,255 - INFO - Profiler started
+2022-11-15 16:31:46,255 - INFO - Adding 1000 edges to NEO4j_DB
+2022-11-15 16:31:55,766 - INFO - Profiler stopped
+2022-11-15 16:31:55,766 - INFO - Benchmark bench_add_single_edge with NEO4j_DB finished in 9.50927734375
+2022-11-15 16:31:55,766 - INFO - Starting benchmark bench_get_single_node with NEO4j_DB
+2022-11-15 16:31:55,767 - INFO - Entering suppression mode for NEO4j_DB
+2022-11-15 16:31:55,767 - INFO - Getting 10000 nodes from NEO4j_DB
+2022-11-15 16:31:55,890 - INFO - Exiting suppression mode for NEO4j_DB
+2022-11-15 16:31:55,890 - INFO - Overhead is 0.12355184555053711
+2022-11-15 16:31:56,174 - INFO - Profiler initialized for NEO4j_DB with pids [16096, 21940]
+2022-11-15 16:31:56,174 - INFO - Profiler started
+2022-11-15 16:31:56,174 - INFO - Getting 10000 nodes from NEO4j_DB
+2022-11-15 16:32:23,013 - INFO - Profiler stopped
+2022-11-15 16:32:23,013 - INFO - Benchmark bench_get_single_node with NEO4j_DB finished in 26.64887547492981
+2022-11-15 17:34:05,072 - INFO - Neo4j driver connected to bolt://localhost:7687
+2022-11-15 17:34:05,185 - INFO - Starting benchmark bench_add_single_node with NEO4j_DB
+2022-11-15 17:34:05,185 - INFO - Entering suppression mode for NEO4j_DB
+2022-11-15 17:34:05,185 - INFO - Adding 100000 nodes to NEO4j_DB
+2022-11-15 17:34:06,450 - INFO - Exiting suppression mode for NEO4j_DB
+2022-11-15 17:34:06,450 - INFO - Overhead is 1.264977216720581
+2022-11-15 17:34:06,712 - INFO - Profiler initialized for NEO4j_DB with pids [16096, 21940]
+2022-11-15 17:34:06,713 - INFO - Profiler started
+2022-11-15 17:34:06,713 - INFO - Adding 100000 nodes to NEO4j_DB
+2022-11-15 17:36:38,488 - INFO - Profiler stopped
+2022-11-15 17:36:38,488 - INFO - Benchmark bench_add_single_node with NEO4j_DB finished in 151.66784596443176
+2022-11-15 17:36:38,489 - INFO - Starting benchmark bench_add_single_edge with NEO4j_DB
+2022-11-15 17:36:38,489 - INFO - Entering suppression mode for NEO4j_DB
+2022-11-15 17:36:38,489 - INFO - Adding 1000 edges to NEO4j_DB
+2022-11-15 17:36:38,502 - INFO - Exiting suppression mode for NEO4j_DB
+2022-11-15 17:36:38,502 - INFO - Overhead is 0.013508319854736328
+2022-11-15 17:36:38,776 - INFO - Profiler initialized for NEO4j_DB with pids [16096, 21940]
+2022-11-15 17:36:38,778 - INFO - Profiler started
+2022-11-15 17:36:38,778 - INFO - Adding 1000 edges to NEO4j_DB
+2022-11-15 17:37:05,338 - INFO - Profiler stopped
+2022-11-15 17:37:05,338 - INFO - Benchmark bench_add_single_edge with NEO4j_DB finished in 26.545963048934937
+2022-11-15 17:37:05,338 - INFO - Starting benchmark bench_get_single_node with NEO4j_DB
+2022-11-15 17:37:05,338 - INFO - Entering suppression mode for NEO4j_DB
+2022-11-15 17:37:05,338 - INFO - Getting 10000 nodes from NEO4j_DB
+2022-11-15 17:37:05,464 - INFO - Exiting suppression mode for NEO4j_DB
+2022-11-15 17:37:05,465 - INFO - Overhead is 0.12640905380249023
+2022-11-15 17:37:05,822 - INFO - Profiler initialized for NEO4j_DB with pids [16096, 21940]
+2022-11-15 17:37:05,822 - INFO - Profiler started
+2022-11-15 17:37:05,822 - INFO - Getting 10000 nodes from NEO4j_DB
+2022-11-15 17:39:36,602 - INFO - Profiler stopped
+2022-11-15 17:39:36,602 - INFO - Benchmark bench_get_single_node with NEO4j_DB finished in 150.59070587158203
+2022-11-15 18:41:46,575 - INFO - Neo4j driver connected to bolt://localhost:7687
+2022-11-15 18:41:47,349 - INFO - Starting benchmark bench_add_single_node with NEO4j_DB
+2022-11-15 18:41:47,349 - INFO - Entering suppression mode for NEO4j_DB
+2022-11-15 18:41:47,349 - INFO - Adding 10000 nodes to NEO4j_DB
+2022-11-15 18:41:47,477 - INFO - Exiting suppression mode for NEO4j_DB
+2022-11-15 18:41:47,477 - INFO - Overhead is 0.12839245796203613
+2022-11-15 18:41:47,813 - INFO - Profiler initialized for NEO4j_DB with pids [16096, 21940]
+2022-11-15 18:41:47,813 - INFO - Profiler started
+2022-11-15 18:41:47,813 - INFO - Adding 10000 nodes to NEO4j_DB
+2022-11-15 18:42:04,835 - INFO - Profiler stopped
+2022-11-15 18:42:04,835 - INFO - Benchmark bench_add_single_node with NEO4j_DB finished in 16.867274522781372
+2022-11-15 18:42:04,835 - INFO - Starting benchmark bench_add_single_edge with NEO4j_DB
+2022-11-15 18:42:04,835 - INFO - Entering suppression mode for NEO4j_DB
+2022-11-15 18:42:04,835 - INFO - Adding 1000 edges to NEO4j_DB
+2022-11-15 18:42:04,848 - INFO - Exiting suppression mode for NEO4j_DB
+2022-11-15 18:42:04,848 - INFO - Overhead is 0.013512372970581055
+2022-11-15 18:42:05,138 - INFO - Profiler initialized for NEO4j_DB with pids [16096, 21940]
+2022-11-15 18:42:05,139 - INFO - Profiler started
+2022-11-15 18:42:05,139 - INFO - Adding 1000 edges to NEO4j_DB
+2022-11-15 18:42:15,765 - INFO - Profiler stopped
+2022-11-15 18:42:15,765 - INFO - Benchmark bench_add_single_edge with NEO4j_DB finished in 9.34514594078064
+2022-11-15 18:42:15,766 - INFO - Starting benchmark bench_get_single_node with NEO4j_DB
+2022-11-15 18:42:15,766 - INFO - Entering suppression mode for NEO4j_DB
+2022-11-15 18:42:15,766 - INFO - Getting 1000 nodes from NEO4j_DB
+2022-11-15 18:42:15,778 - INFO - Exiting suppression mode for NEO4j_DB
+2022-11-15 18:42:15,778 - INFO - Overhead is 0.011510848999023438
+2022-11-15 18:42:16,069 - INFO - Profiler initialized for NEO4j_DB with pids [16096, 21940]
+2022-11-15 18:42:16,070 - INFO - Profiler started
+2022-11-15 18:42:16,070 - INFO - Getting 1000 nodes from NEO4j_DB
+2022-11-15 18:42:20,302 - INFO - Profiler stopped
+2022-11-15 18:42:20,302 - INFO - Benchmark bench_get_single_node with NEO4j_DB finished in 2.8645293712615967
+2022-11-16 11:33:38,642 - INFO - Neo4j driver connected to bolt://localhost:7687
+2022-11-16 11:33:42,696 - ERROR - Could not connect to Neo4j: Couldn't connect to localhost:7687 (resolved to ()):
+Failed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7687)) (reason [WinError 10061] Es konnte keine Verbindung hergestellt werden, da der Zielcomputer die Verbindung verweigerte)
+Failed to establish connection to ResolvedIPv6Address(('::1', 7687, 0, 0)) (reason [WinError 10061] Es konnte keine Verbindung hergestellt werden, da der Zielcomputer die Verbindung verweigerte)
+2022-11-16 11:34:27,625 - INFO - Neo4j driver connected to bolt://localhost:7687
+2022-11-16 11:34:28,196 - INFO - Starting benchmark bench_add_single_node with NEO4j_DB
+2022-11-16 11:34:28,196 - INFO - Entering suppression mode for NEO4j_DB
+2022-11-16 11:34:28,196 - INFO - Adding 100000 nodes to NEO4j_DB
+2022-11-16 11:34:29,429 - INFO - Exiting suppression mode for NEO4j_DB
+2022-11-16 11:34:29,430 - INFO - Overhead is 1.2328200340270996
+2022-11-16 11:34:29,718 - INFO - Profiler initialized for NEO4j_DB with pids [9524, 14124]
+2022-11-16 11:34:29,718 - INFO - Profiler started
+2022-11-16 11:34:29,718 - INFO - Adding 100000 nodes to NEO4j_DB
+2022-11-16 11:37:11,557 - INFO - Profiler stopped
+2022-11-16 11:37:11,557 - INFO - Benchmark bench_add_single_node with NEO4j_DB finished in 161.1028995513916
+2022-11-16 11:37:11,557 - INFO - Saving data to Results/bench_add_single_node_NEO4j_DB_2022-11-16_11-37-11.bench
+2022-11-16 11:37:11,558 - INFO - Starting benchmark bench_add_single_edge with NEO4j_DB
+2022-11-16 11:37:11,558 - INFO - Entering suppression mode for NEO4j_DB
+2022-11-16 11:37:11,558 - INFO - Adding 1000 edges to NEO4j_DB
+2022-11-16 11:37:11,570 - INFO - Exiting suppression mode for NEO4j_DB
+2022-11-16 11:37:11,570 - INFO - Overhead is 0.012035608291625977
+2022-11-16 11:37:11,891 - INFO - Profiler initialized for NEO4j_DB with pids [9524, 14124]
+2022-11-16 11:37:11,891 - INFO - Profiler started
+2022-11-16 11:37:11,891 - INFO - Adding 1000 edges to NEO4j_DB
+2022-11-16 11:37:35,305 - INFO - Profiler stopped
+2022-11-16 11:37:35,305 - INFO - Benchmark bench_add_single_edge with NEO4j_DB finished in 22.379100799560547
+2022-11-16 11:37:35,305 - INFO - Saving data to Results/bench_add_single_edge_NEO4j_DB_2022-11-16_11-37-35.bench
+2022-11-16 11:37:35,305 - INFO - Starting benchmark bench_get_single_node with NEO4j_DB
+2022-11-16 11:37:35,306 - INFO - Entering suppression mode for NEO4j_DB
+2022-11-16 11:37:35,306 - INFO - Getting 1000 nodes from NEO4j_DB
+2022-11-16 11:37:35,318 - INFO - Exiting suppression mode for NEO4j_DB
+2022-11-16 11:37:35,318 - INFO - Overhead is 0.012765169143676758
+2022-11-16 11:37:35,608 - INFO - Profiler initialized for NEO4j_DB with pids [9524, 14124]
+2022-11-16 11:37:35,608 - INFO - Profiler started
+2022-11-16 11:37:35,609 - INFO - Getting 1000 nodes from NEO4j_DB
+2022-11-16 11:37:48,350 - INFO - Profiler stopped
+2022-11-16 11:37:48,350 - INFO - Benchmark bench_get_single_node with NEO4j_DB finished in 11.827750444412231
+2022-11-16 11:37:48,350 - INFO - Saving data to Results/bench_get_single_node_NEO4j_DB_2022-11-16_11-37-48.bench
+2022-11-16 14:04:33,228 - ERROR - Could not connect to ArangoDB: name 'url' is not defined
+2022-11-16 14:09:53,489 - INFO - Starting benchmark bench_add_single_node with NEO4j
+2022-11-16 14:09:53,489 - INFO - Entering suppression mode for NEO4j
+2022-11-16 14:09:53,489 - INFO - Adding 100000 nodes to NEO4j
+2022-11-16 14:09:54,846 - INFO - Exiting suppression mode for NEO4j
+2022-11-16 14:09:54,847 - INFO - Overhead is 1.3566563129425049
+2022-11-16 14:09:55,176 - INFO - Profiler initialized for NEO4j with pids [9524, 14124]
+2022-11-16 14:09:55,177 - INFO - Profiler started
+2022-11-16 14:09:55,177 - INFO - Adding 100000 nodes to NEO4j
+2022-11-16 14:12:10,350 - INFO - Starting benchmark bench_add_single_node with NEO4j
+2022-11-16 14:12:10,352 - INFO - Entering suppression mode for NEO4j
+2022-11-16 14:12:10,352 - INFO - Adding 10000 nodes to NEO4j
+2022-11-16 14:12:10,490 - INFO - Exiting suppression mode for NEO4j
+2022-11-16 14:12:10,490 - INFO - Overhead is 0.13843345642089844
+2022-11-16 14:12:10,832 - INFO - Profiler initialized for NEO4j with pids [9524, 14124]
+2022-11-16 14:12:10,833 - INFO - Profiler started
+2022-11-16 14:12:10,833 - INFO - Adding 10000 nodes to NEO4j
+2022-11-16 14:12:27,852 - INFO - Profiler stopped
+2022-11-16 14:12:27,852 - INFO - Benchmark bench_add_single_node with NEO4j finished in 15.128325939178467
+2022-11-16 14:12:27,852 - INFO - CPU average: 18.625 %, MEM average: 1097.30908203125 MB
+2022-11-16 14:12:27,852 - INFO - Saving data to Results/bench_add_single_node_NEO4j_2022-11-16_14-12-27.bench
+2022-11-16 14:12:27,853 - INFO - Starting benchmark bench_add_single_node with ArangoDB
+2022-11-16 14:12:27,853 - INFO - Entering suppression mode for ArangoDB
+2022-11-16 14:12:27,853 - INFO - Adding 10000 nodes to ArangoDB
+2022-11-16 14:12:27,862 - INFO - Exiting suppression mode for ArangoDB
+2022-11-16 14:12:27,862 - INFO - Overhead is 0.009016752243041992
+2022-11-16 14:13:33,155 - INFO - Starting benchmark bench_add_single_node with NEO4j
+2022-11-16 14:13:33,155 - INFO - Entering suppression mode for NEO4j
+2022-11-16 14:13:33,155 - INFO - Adding 10000 nodes to NEO4j
+2022-11-16 14:13:33,292 - INFO - Exiting suppression mode for NEO4j
+2022-11-16 14:13:33,293 - INFO - Overhead is 0.13733363151550293
+2022-11-16 14:13:33,632 - INFO - Profiler initialized for NEO4j with pids [9524, 14124]
+2022-11-16 14:13:33,633 - INFO - Profiler started
+2022-11-16 14:13:33,633 - INFO - Adding 10000 nodes to NEO4j
+2022-11-16 14:13:50,687 - INFO - Profiler stopped
+2022-11-16 14:13:50,687 - INFO - Benchmark bench_add_single_node with NEO4j finished in 15.078147888183594
+2022-11-16 14:13:50,687 - INFO - CPU average: 23.1375 %, MEM average: 1099.90380859375 MB
+2022-11-16 14:13:50,687 - INFO - Saving data to Results/bench_add_single_node_NEO4j_2022-11-16_14-13-50.bench
+2022-11-16 14:13:50,687 - INFO - Starting benchmark bench_add_single_node with ArangoDB
+2022-11-16 14:13:50,687 - INFO - Entering suppression mode for ArangoDB
+2022-11-16 14:13:50,687 - INFO - Adding 10000 nodes to ArangoDB
+2022-11-16 14:13:50,697 - INFO - Exiting suppression mode for ArangoDB
+2022-11-16 14:13:50,697 - INFO - Overhead is 0.010024070739746094
+2022-11-16 14:13:50,974 - INFO - Profiler initialized for ArangoDB with pids [19388]
+2022-11-16 14:13:50,974 - INFO - Profiler started
+2022-11-16 14:13:50,974 - INFO - Adding 10000 nodes to ArangoDB
+2022-11-16 14:13:59,912 - INFO - Profiler stopped
+2022-11-16 14:13:59,912 - INFO - Benchmark bench_add_single_node with ArangoDB finished in 8.014194965362549
+2022-11-16 14:13:59,912 - INFO - CPU average: 1.5374999999999999 %, MEM average: 170.01318359375 MB
+2022-11-16 14:13:59,912 - INFO - Saving data to Results/bench_add_single_node_ArangoDB_2022-11-16_14-13-59.bench
+2022-11-16 14:13:59,913 - INFO - Starting benchmark bench_add_single_edge with NEO4j
+2022-11-16 14:13:59,913 - INFO - Entering suppression mode for NEO4j
+2022-11-16 14:13:59,913 - INFO - Adding 1000 edges to NEO4j
+2022-11-16 14:13:59,926 - INFO - Exiting suppression mode for NEO4j
+2022-11-16 14:13:59,926 - INFO - Overhead is 0.013535261154174805
+2022-11-16 14:14:00,231 - INFO - Profiler initialized for NEO4j with pids [9524, 14124]
+2022-11-16 14:14:00,232 - INFO - Profiler started
+2022-11-16 14:14:00,232 - INFO - Adding 1000 edges to NEO4j
+2022-11-16 14:14:08,762 - INFO - Profiler stopped
+2022-11-16 14:14:08,762 - INFO - Benchmark bench_add_single_edge with NEO4j finished in 8.239968061447144
+2022-11-16 14:14:08,762 - INFO - CPU average: 6.924999999999999 %, MEM average: 1100.4765625 MB
+2022-11-16 14:14:08,762 - INFO - Saving data to Results/bench_add_single_edge_NEO4j_2022-11-16_14-14-08.bench
+2022-11-16 14:14:08,763 - INFO - Starting benchmark bench_add_single_edge with ArangoDB
+2022-11-16 14:14:08,763 - INFO - Entering suppression mode for ArangoDB
+2022-11-16 14:14:08,763 - INFO - Adding 1000 edges to ArangoDB
+2022-11-16 14:14:08,764 - INFO - Exiting suppression mode for ArangoDB
+2022-11-16 14:14:08,764 - INFO - Overhead is 0.0009996891021728516
+2022-11-16 14:14:09,096 - INFO - Profiler initialized for ArangoDB with pids [19388]
+2022-11-16 14:14:09,096 - INFO - Profiler started
+2022-11-16 14:14:09,096 - INFO - Adding 1000 edges to ArangoDB
+2022-11-16 14:14:13,561 - INFO - Profiler stopped
+2022-11-16 14:14:13,561 - INFO - Benchmark bench_add_single_edge with ArangoDB finished in 4.40528130531311
+2022-11-16 14:14:13,561 - INFO - CPU average: 5.825 %, MEM average: 171.013671875 MB
+2022-11-16 14:14:13,561 - INFO - Saving data to Results/bench_add_single_edge_ArangoDB_2022-11-16_14-14-13.bench
+2022-11-16 14:14:13,562 - INFO - Starting benchmark bench_get_single_node with NEO4j
+2022-11-16 14:14:13,562 - INFO - Entering suppression mode for NEO4j
+2022-11-16 14:14:13,562 - INFO - Getting 1000 nodes from NEO4j
+2022-11-16 14:14:13,574 - INFO - Exiting suppression mode for NEO4j
+2022-11-16 14:14:13,574 - INFO - Overhead is 0.012521743774414062
+2022-11-16 14:14:13,919 - INFO - Profiler initialized for NEO4j with pids [9524, 14124]
+2022-11-16 14:14:13,920 - INFO - Profiler started
+2022-11-16 14:14:13,920 - INFO - Getting 1000 nodes from NEO4j
+2022-11-16 14:14:18,190 - INFO - Profiler stopped
+2022-11-16 14:14:18,190 - INFO - Benchmark bench_get_single_node with NEO4j finished in 2.8204331398010254
+2022-11-16 14:14:18,190 - INFO - CPU average: 10.75 %, MEM average: 1100.884765625 MB
+2022-11-16 14:14:18,190 - INFO - Saving data to Results/bench_get_single_node_NEO4j_2022-11-16_14-14-18.bench
+2022-11-16 14:14:18,191 - INFO - Starting benchmark bench_get_single_node with ArangoDB
+2022-11-16 14:14:18,191 - INFO - Entering suppression mode for ArangoDB
+2022-11-16 14:14:18,191 - INFO - Getting 1000 nodes from ArangoDB
+2022-11-16 14:14:18,191 - INFO - Exiting suppression mode for ArangoDB
+2022-11-16 14:14:18,191 - INFO - Overhead is 0.0
+2022-11-16 14:14:18,485 - INFO - Profiler initialized for ArangoDB with pids [19388]
+2022-11-16 14:14:18,485 - INFO - Profiler started
+2022-11-16 14:14:18,486 - INFO - Getting 1000 nodes from ArangoDB
+2022-11-16 14:14:21,839 - INFO - Profiler stopped
+2022-11-16 14:14:21,839 - INFO - Benchmark bench_get_single_node with ArangoDB finished in 2.5833470821380615
+2022-11-16 14:14:21,839 - INFO - CPU average: 1.5666666666666667 %, MEM average: 171.16796875 MB
+2022-11-16 14:14:21,839 - INFO - Saving data to Results/bench_get_single_node_ArangoDB_2022-11-16_14-14-21.bench
