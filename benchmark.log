@@ -443,3 +443,520 @@ Failed to establish connection to ResolvedIPv6Address(('::1', 7687, 0, 0)) (reas
 2022-11-16 14:14:21,839 - INFO - Benchmark bench_get_single_node with ArangoDB finished in 2.5833470821380615
 2022-11-16 14:14:21,839 - INFO - CPU average: 1.5666666666666667 %, MEM average: 171.16796875 MB
 2022-11-16 14:14:21,839 - INFO - Saving data to Results/bench_get_single_node_ArangoDB_2022-11-16_14-14-21.bench
+2022-11-17 13:16:54,568 - ERROR - Could not connect to Neo4j: Couldn't connect to localhost:7687 (resolved to ()):
+Failed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7687)) (reason [WinError 10061] Es konnte keine Verbindung hergestellt werden, da der Zielcomputer die Verbindung verweigerte)
+Failed to establish connection to ResolvedIPv6Address(('::1', 7687, 0, 0)) (reason [WinError 10061] Es konnte keine Verbindung hergestellt werden, da der Zielcomputer die Verbindung verweigerte)
+2022-11-17 13:16:58,642 - WARNING - Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023D13CA1570>: Failed to establish a new connection: [WinError 10061] Es konnte keine Verbindung hergestellt werden, da der Zielcomputer die Verbindung verweigerte')': /_api/user/root/database
+2022-11-17 13:17:02,746 - WARNING - Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023D13CA0AC0>: Failed to establish a new connection: [WinError 10061] Es konnte keine Verbindung hergestellt werden, da der Zielcomputer die Verbindung verweigerte')': /_api/user/root/database
+2022-11-17 13:17:06,797 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023D13CA0D30>: Failed to establish a new connection: [WinError 10061] Es konnte keine Verbindung hergestellt werden, da der Zielcomputer die Verbindung verweigerte')': /_api/user/root/database
+2022-11-17 13:17:10,849 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023D13CA1780>: Failed to establish a new connection: [WinError 10061] Es konnte keine Verbindung hergestellt werden, da der Zielcomputer die Verbindung verweigerte')': /_api/user/root/database
+2022-11-17 13:17:14,962 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023D13CA1990>: Failed to establish a new connection: [WinError 10061] Es konnte keine Verbindung hergestellt werden, da der Zielcomputer die Verbindung verweigerte')': /_api/user/root/database
+2022-11-17 13:17:19,050 - ERROR - Could not connect to ArangoDB: HTTPConnectionPool(host='localhost', port=8529): Max retries exceeded with url: /_api/user/root/database (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023D13CA1BD0>: Failed to establish a new connection: [WinError 10061] Es konnte keine Verbindung hergestellt werden, da der Zielcomputer die Verbindung verweigerte'))
+2022-11-17 13:17:19,053 - ERROR - Could not connect to OrientDB: Socket Error: [Errno 11001] getaddrinfo failed
+2022-11-17 13:19:04,566 - ERROR - Could not connect to Neo4j: Couldn't connect to localhost:7687 (resolved to ()):
+Failed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7687)) (reason [WinError 10061] Es konnte keine Verbindung hergestellt werden, da der Zielcomputer die Verbindung verweigerte)
+Failed to establish connection to ResolvedIPv6Address(('::1', 7687, 0, 0)) (reason [WinError 10061] Es konnte keine Verbindung hergestellt werden, da der Zielcomputer die Verbindung verweigerte)
+2022-11-17 13:19:08,631 - WARNING - Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002111F1C15A0>: Failed to establish a new connection: [WinError 10061] Es konnte keine Verbindung hergestellt werden, da der Zielcomputer die Verbindung verweigerte')': /_api/user/root/database
+2022-11-17 13:19:12,706 - WARNING - Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002111F1C0AF0>: Failed to establish a new connection: [WinError 10061] Es konnte keine Verbindung hergestellt werden, da der Zielcomputer die Verbindung verweigerte')': /_api/user/root/database
+2022-11-17 13:19:16,809 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002111F1C0D60>: Failed to establish a new connection: [WinError 10061] Es konnte keine Verbindung hergestellt werden, da der Zielcomputer die Verbindung verweigerte')': /_api/user/root/database
+2022-11-17 13:19:20,871 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002111F1C17B0>: Failed to establish a new connection: [WinError 10061] Es konnte keine Verbindung hergestellt werden, da der Zielcomputer die Verbindung verweigerte')': /_api/user/root/database
+2022-11-17 13:19:24,945 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002111F1C19C0>: Failed to establish a new connection: [WinError 10061] Es konnte keine Verbindung hergestellt werden, da der Zielcomputer die Verbindung verweigerte')': /_api/user/root/database
+2022-11-17 13:19:29,012 - ERROR - Could not connect to ArangoDB: HTTPConnectionPool(host='localhost', port=8529): Max retries exceeded with url: /_api/user/root/database (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002111F1C1C00>: Failed to establish a new connection: [WinError 10061] Es konnte keine Verbindung hergestellt werden, da der Zielcomputer die Verbindung verweigerte'))
+2022-11-17 13:19:29,116 - INFO - Starting benchmark bench_add_single_node with OrientDB
+2022-11-17 13:19:29,116 - INFO - Entering suppression mode for OrientDB
+2022-11-17 13:19:29,116 - INFO - Adding 10000 nodes to OrientDB
+2022-11-17 13:19:29,123 - INFO - Exiting suppression mode for OrientDB
+2022-11-17 13:19:29,123 - INFO - Overhead is 0.0075070858001708984
+2022-11-17 13:19:29,416 - INFO - Profiler initialized for OrientDB with pids [1660, 14992]
+2022-11-17 13:19:29,417 - INFO - Profiler started
+2022-11-17 13:19:29,417 - INFO - Adding 10000 nodes to OrientDB
+2022-11-17 13:19:33,654 - INFO - Profiler stopped
+2022-11-17 13:19:33,654 - INFO - Benchmark bench_add_single_node with OrientDB finished in 2.589890956878662
+2022-11-17 13:19:33,654 - INFO - CPU average: 1.55 %, MEM average: 2364.263671875 MB
+2022-11-17 13:19:33,654 - INFO - Saving data to Results/bench_add_single_node_OrientDB_2022-11-17_13-19-33.bench
+2022-11-17 13:19:33,655 - INFO - Starting benchmark bench_add_single_edge with OrientDB
+2022-11-17 13:19:33,655 - INFO - Entering suppression mode for OrientDB
+2022-11-17 13:19:33,655 - INFO - Adding 1000 edges to OrientDB
+2022-11-17 13:19:33,656 - INFO - Exiting suppression mode for OrientDB
+2022-11-17 13:19:33,656 - INFO - Overhead is 0.0010025501251220703
+2022-11-17 13:19:33,989 - INFO - Profiler initialized for OrientDB with pids [1660, 14992]
+2022-11-17 13:19:33,990 - INFO - Profiler started
+2022-11-17 13:19:33,990 - INFO - Adding 1000 edges to OrientDB
+2022-11-17 13:19:55,255 - INFO - Profiler stopped
+2022-11-17 13:19:55,255 - INFO - Benchmark bench_add_single_edge with OrientDB finished in 19.77347493171692
+2022-11-17 13:19:55,255 - INFO - CPU average: 67.96 %, MEM average: 2361.686328125 MB
+2022-11-17 13:19:55,255 - INFO - Saving data to Results/bench_add_single_edge_OrientDB_2022-11-17_13-19-55.bench
+2022-11-17 13:19:55,256 - INFO - Starting benchmark bench_get_single_node with OrientDB
+2022-11-17 13:19:55,256 - INFO - Entering suppression mode for OrientDB
+2022-11-17 13:19:55,256 - INFO - Getting 1000 nodes from OrientDB
+2022-11-17 13:19:55,256 - INFO - Exiting suppression mode for OrientDB
+2022-11-17 13:19:55,256 - INFO - Overhead is 0.0
+2022-11-17 13:19:55,586 - INFO - Profiler initialized for OrientDB with pids [1660, 14992]
+2022-11-17 13:19:55,586 - INFO - Profiler started
+2022-11-17 13:19:55,586 - INFO - Getting 1000 nodes from OrientDB
+2022-11-17 13:20:08,391 - INFO - Profiler stopped
+2022-11-17 13:20:08,391 - INFO - Benchmark bench_get_single_node with OrientDB finished in 11.772099733352661
+2022-11-17 13:20:08,391 - INFO - CPU average: 1.3 %, MEM average: 2371.2239583333335 MB
+2022-11-17 13:20:08,391 - INFO - Saving data to Results/bench_get_single_node_OrientDB_2022-11-17_13-20-08.bench
+2022-11-17 16:27:07,224 - ERROR - Could not connect to Neo4j: Couldn't connect to localhost:7687 (resolved to ()):
+Failed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7687)) (reason [WinError 10061] Es konnte keine Verbindung hergestellt werden, da der Zielcomputer die Verbindung verweigerte)
+Failed to establish connection to ResolvedIPv6Address(('::1', 7687, 0, 0)) (reason [WinError 10061] Es konnte keine Verbindung hergestellt werden, da der Zielcomputer die Verbindung verweigerte)
+2022-11-17 16:27:11,317 - WARNING - Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027A822DE740>: Failed to establish a new connection: [WinError 10061] Es konnte keine Verbindung hergestellt werden, da der Zielcomputer die Verbindung verweigerte')': /_api/user/root/database
+2022-11-17 16:27:15,401 - WARNING - Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027A822DDC90>: Failed to establish a new connection: [WinError 10061] Es konnte keine Verbindung hergestellt werden, da der Zielcomputer die Verbindung verweigerte')': /_api/user/root/database
+2022-11-17 16:27:19,503 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027A822DDF00>: Failed to establish a new connection: [WinError 10061] Es konnte keine Verbindung hergestellt werden, da der Zielcomputer die Verbindung verweigerte')': /_api/user/root/database
+2022-11-17 16:27:23,586 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027A822DE950>: Failed to establish a new connection: [WinError 10061] Es konnte keine Verbindung hergestellt werden, da der Zielcomputer die Verbindung verweigerte')': /_api/user/root/database
+2022-11-17 16:27:27,678 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027A822DEB60>: Failed to establish a new connection: [WinError 10061] Es konnte keine Verbindung hergestellt werden, da der Zielcomputer die Verbindung verweigerte')': /_api/user/root/database
+2022-11-17 16:27:31,744 - ERROR - Could not connect to ArangoDB: HTTPConnectionPool(host='localhost', port=8529): Max retries exceeded with url: /_api/user/root/database (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027A822DEDA0>: Failed to establish a new connection: [WinError 10061] Es konnte keine Verbindung hergestellt werden, da der Zielcomputer die Verbindung verweigerte'))
+2022-11-17 16:27:31,873 - INFO - Starting benchmark bench_add_single_node with OrientDB
+2022-11-17 16:27:31,874 - INFO - Entering suppression mode for OrientDB
+2022-11-17 16:27:31,874 - INFO - Adding 1000 nodes to OrientDB
+2022-11-17 16:27:31,874 - INFO - Exiting suppression mode for OrientDB
+2022-11-17 16:27:31,874 - INFO - Overhead is 0.0
+2022-11-17 16:27:32,228 - INFO - Profiler initialized for OrientDB with pids [1660, 14992]
+2022-11-17 16:27:32,228 - INFO - Profiler started
+2022-11-17 16:27:32,228 - INFO - Adding 1000 nodes to OrientDB
+2022-11-17 16:27:34,357 - INFO - Profiler stopped
+2022-11-17 16:27:34,357 - INFO - Benchmark bench_add_single_node with OrientDB finished in 0.26300549507141113
+2022-11-17 16:27:34,357 - INFO - CPU average: 0.0 %, MEM average: 2352.9375 MB
+2022-11-17 16:27:34,357 - INFO - Starting benchmark bench_add_single_node with OrientDB
+2022-11-17 16:27:34,357 - INFO - Entering suppression mode for OrientDB
+2022-11-17 16:27:34,357 - INFO - Adding 2000 nodes to OrientDB
+2022-11-17 16:27:34,359 - INFO - Exiting suppression mode for OrientDB
+2022-11-17 16:27:34,359 - INFO - Overhead is 0.0019996166229248047
+2022-11-17 16:27:34,622 - INFO - Profiler initialized for OrientDB with pids [1660, 14992]
+2022-11-17 16:27:34,622 - INFO - Profiler started
+2022-11-17 16:27:34,622 - INFO - Adding 2000 nodes to OrientDB
+2022-11-17 16:27:36,746 - INFO - Profiler stopped
+2022-11-17 16:27:36,746 - INFO - Benchmark bench_add_single_node with OrientDB finished in 0.5128719806671143
+2022-11-17 16:27:36,746 - INFO - CPU average: 0.0 %, MEM average: 2364.35546875 MB
+2022-11-17 16:27:36,746 - INFO - Starting benchmark bench_add_single_node with OrientDB
+2022-11-17 16:27:36,746 - INFO - Entering suppression mode for OrientDB
+2022-11-17 16:27:36,746 - INFO - Adding 3000 nodes to OrientDB
+2022-11-17 16:27:36,749 - INFO - Exiting suppression mode for OrientDB
+2022-11-17 16:27:36,749 - INFO - Overhead is 0.0030012130737304688
+2022-11-17 16:27:37,069 - INFO - Profiler initialized for OrientDB with pids [1660, 14992]
+2022-11-17 16:27:37,069 - INFO - Profiler started
+2022-11-17 16:27:37,069 - INFO - Adding 3000 nodes to OrientDB
+2022-11-17 16:27:39,205 - INFO - Profiler stopped
+2022-11-17 16:27:39,205 - INFO - Benchmark bench_add_single_node with OrientDB finished in 0.786121129989624
+2022-11-17 16:27:39,205 - INFO - CPU average: 0.0 %, MEM average: 2371.8203125 MB
+2022-11-17 16:27:39,205 - INFO - Starting benchmark bench_add_single_node with OrientDB
+2022-11-17 16:27:39,205 - INFO - Entering suppression mode for OrientDB
+2022-11-17 16:27:39,205 - INFO - Adding 4000 nodes to OrientDB
+2022-11-17 16:27:39,208 - INFO - Exiting suppression mode for OrientDB
+2022-11-17 16:27:39,209 - INFO - Overhead is 0.0039997100830078125
+2022-11-17 16:27:39,504 - INFO - Profiler initialized for OrientDB with pids [1660, 14992]
+2022-11-17 16:27:39,505 - INFO - Profiler started
+2022-11-17 16:27:39,505 - INFO - Adding 4000 nodes to OrientDB
+2022-11-17 16:27:41,620 - INFO - Profiler stopped
+2022-11-17 16:27:41,620 - INFO - Benchmark bench_add_single_node with OrientDB finished in 1.0399768352508545
+2022-11-17 16:27:41,620 - INFO - CPU average: 1.6 %, MEM average: 2371.8359375 MB
+2022-11-17 16:27:41,620 - INFO - Starting benchmark bench_add_single_node with OrientDB
+2022-11-17 16:27:41,620 - INFO - Entering suppression mode for OrientDB
+2022-11-17 16:27:41,620 - INFO - Adding 5000 nodes to OrientDB
+2022-11-17 16:27:41,625 - INFO - Exiting suppression mode for OrientDB
+2022-11-17 16:27:41,625 - INFO - Overhead is 0.00445556640625
+2022-11-17 16:27:41,929 - INFO - Profiler initialized for OrientDB with pids [1660, 14992]
+2022-11-17 16:27:41,929 - INFO - Profiler started
+2022-11-17 16:27:41,929 - INFO - Adding 5000 nodes to OrientDB
+2022-11-17 16:27:44,061 - INFO - Profiler stopped
+2022-11-17 16:27:44,061 - INFO - Benchmark bench_add_single_node with OrientDB finished in 1.2598371505737305
+2022-11-17 16:27:44,061 - INFO - CPU average: 0.0 %, MEM average: 2371.84765625 MB
+2022-11-17 16:27:44,061 - INFO - Starting benchmark bench_add_single_node with OrientDB
+2022-11-17 16:27:44,061 - INFO - Entering suppression mode for OrientDB
+2022-11-17 16:27:44,061 - INFO - Adding 6000 nodes to OrientDB
+2022-11-17 16:27:44,066 - INFO - Exiting suppression mode for OrientDB
+2022-11-17 16:27:44,066 - INFO - Overhead is 0.004509925842285156
+2022-11-17 16:27:44,336 - INFO - Profiler initialized for OrientDB with pids [1660, 14992]
+2022-11-17 16:27:44,336 - INFO - Profiler started
+2022-11-17 16:27:44,336 - INFO - Adding 6000 nodes to OrientDB
+2022-11-17 16:27:46,461 - INFO - Profiler stopped
+2022-11-17 16:27:46,461 - INFO - Benchmark bench_add_single_node with OrientDB finished in 1.499828577041626
+2022-11-17 16:27:46,461 - INFO - CPU average: 18.5 %, MEM average: 2372.578125 MB
+2022-11-17 16:27:46,461 - INFO - Starting benchmark bench_add_single_node with OrientDB
+2022-11-17 16:27:46,461 - INFO - Entering suppression mode for OrientDB
+2022-11-17 16:27:46,461 - INFO - Adding 7000 nodes to OrientDB
+2022-11-17 16:27:46,466 - INFO - Exiting suppression mode for OrientDB
+2022-11-17 16:27:46,466 - INFO - Overhead is 0.005519390106201172
+2022-11-17 16:27:46,781 - INFO - Profiler initialized for OrientDB with pids [1660, 14992]
+2022-11-17 16:27:46,781 - INFO - Profiler started
+2022-11-17 16:27:46,781 - INFO - Adding 7000 nodes to OrientDB
+2022-11-17 16:27:48,906 - INFO - Profiler stopped
+2022-11-17 16:27:48,906 - INFO - Benchmark bench_add_single_node with OrientDB finished in 1.7588341236114502
+2022-11-17 16:27:48,906 - INFO - CPU average: 23.1 %, MEM average: 2372.66015625 MB
+2022-11-17 16:27:48,906 - INFO - Starting benchmark bench_add_single_node with OrientDB
+2022-11-17 16:27:48,906 - INFO - Entering suppression mode for OrientDB
+2022-11-17 16:27:48,906 - INFO - Adding 8000 nodes to OrientDB
+2022-11-17 16:27:48,911 - INFO - Exiting suppression mode for OrientDB
+2022-11-17 16:27:48,911 - INFO - Overhead is 0.00551152229309082
+2022-11-17 16:27:49,188 - INFO - Profiler initialized for OrientDB with pids [1660, 14992]
+2022-11-17 16:27:49,189 - INFO - Profiler started
+2022-11-17 16:27:49,189 - INFO - Adding 8000 nodes to OrientDB
+2022-11-17 16:27:51,320 - INFO - Profiler stopped
+2022-11-17 16:27:51,320 - INFO - Benchmark bench_add_single_node with OrientDB finished in 2.0140926837921143
+2022-11-17 16:27:51,320 - INFO - CPU average: 15.4 %, MEM average: 2372.86328125 MB
+2022-11-17 16:27:51,320 - INFO - Starting benchmark bench_add_single_node with OrientDB
+2022-11-17 16:27:51,320 - INFO - Entering suppression mode for OrientDB
+2022-11-17 16:27:51,320 - INFO - Adding 9000 nodes to OrientDB
+2022-11-17 16:27:51,327 - INFO - Exiting suppression mode for OrientDB
+2022-11-17 16:27:51,327 - INFO - Overhead is 0.0074656009674072266
+2022-11-17 16:27:51,616 - INFO - Profiler initialized for OrientDB with pids [1660, 14992]
+2022-11-17 16:27:51,617 - INFO - Profiler started
+2022-11-17 16:27:51,617 - INFO - Adding 9000 nodes to OrientDB
+2022-11-17 16:27:55,887 - INFO - Profiler stopped
+2022-11-17 16:27:55,887 - INFO - Benchmark bench_add_single_node with OrientDB finished in 2.2589457035064697
+2022-11-17 16:27:55,887 - INFO - CPU average: 0.0 %, MEM average: 2372.86328125 MB
+2022-11-17 16:27:55,887 - INFO - Starting benchmark bench_add_single_node with OrientDB
+2022-11-17 16:27:55,887 - INFO - Entering suppression mode for OrientDB
+2022-11-17 16:27:55,887 - INFO - Adding 10000 nodes to OrientDB
+2022-11-17 16:27:55,896 - INFO - Exiting suppression mode for OrientDB
+2022-11-17 16:27:55,896 - INFO - Overhead is 0.009027719497680664
+2022-11-17 16:27:56,199 - INFO - Profiler initialized for OrientDB with pids [1660, 14992]
+2022-11-17 16:27:56,200 - INFO - Profiler started
+2022-11-17 16:27:56,200 - INFO - Adding 10000 nodes to OrientDB
+2022-11-17 16:28:00,462 - INFO - Profiler stopped
+2022-11-17 16:28:00,462 - INFO - Benchmark bench_add_single_node with OrientDB finished in 2.510845184326172
+2022-11-17 16:28:00,462 - INFO - CPU average: 0.0 %, MEM average: 2372.95703125 MB
+2022-11-17 16:28:00,462 - INFO - Saving data to Results/bench_add_single_node_OrientDB_iter_2022-11-17_16-28-00.bench
+2022-11-17 21:03:50,806 - ERROR - Could not connect to Neo4j: Couldn't connect to localhost:7687 (resolved to ()):
+Failed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7687)) (reason [WinError 10061] Es konnte keine Verbindung hergestellt werden, da der Zielcomputer die Verbindung verweigerte)
+Failed to establish connection to ResolvedIPv6Address(('::1', 7687, 0, 0)) (reason [WinError 10061] Es konnte keine Verbindung hergestellt werden, da der Zielcomputer die Verbindung verweigerte)
+2022-11-17 21:03:54,874 - WARNING - Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001B589F2E980>: Failed to establish a new connection: [WinError 10061] Es konnte keine Verbindung hergestellt werden, da der Zielcomputer die Verbindung verweigerte')': /_api/user/root/database
+2022-11-17 21:03:58,963 - WARNING - Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001B589F2DED0>: Failed to establish a new connection: [WinError 10061] Es konnte keine Verbindung hergestellt werden, da der Zielcomputer die Verbindung verweigerte')': /_api/user/root/database
+2022-11-17 21:04:03,016 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001B589F2E140>: Failed to establish a new connection: [WinError 10061] Es konnte keine Verbindung hergestellt werden, da der Zielcomputer die Verbindung verweigerte')': /_api/user/root/database
+2022-11-17 21:04:07,081 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001B589F2EB90>: Failed to establish a new connection: [WinError 10061] Es konnte keine Verbindung hergestellt werden, da der Zielcomputer die Verbindung verweigerte')': /_api/user/root/database
+2022-11-17 21:04:11,121 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001B589F2EDA0>: Failed to establish a new connection: [WinError 10061] Es konnte keine Verbindung hergestellt werden, da der Zielcomputer die Verbindung verweigerte')': /_api/user/root/database
+2022-11-17 21:04:15,206 - ERROR - Could not connect to ArangoDB: HTTPConnectionPool(host='localhost', port=8529): Max retries exceeded with url: /_api/user/root/database (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001B589F2EFE0>: Failed to establish a new connection: [WinError 10061] Es konnte keine Verbindung hergestellt werden, da der Zielcomputer die Verbindung verweigerte'))
+2022-11-17 21:05:02,616 - INFO - Starting benchmark bench_add_single_node with OrientDB
+2022-11-17 21:05:02,616 - INFO - Entering suppression mode for OrientDB
+2022-11-17 21:05:02,616 - INFO - Adding 1000 nodes to OrientDB
+2022-11-17 21:05:02,617 - INFO - Exiting suppression mode for OrientDB
+2022-11-17 21:05:02,617 - INFO - Overhead is 0.00099945068359375
+2022-11-17 21:05:02,992 - INFO - Profiler initialized for OrientDB with pids [18604, 27904]
+2022-11-17 21:05:02,993 - INFO - Profiler started
+2022-11-17 21:05:02,993 - INFO - Adding 1000 nodes to OrientDB
+2022-11-17 21:05:05,114 - INFO - Profiler stopped
+2022-11-17 21:05:05,114 - INFO - Benchmark bench_add_single_node with OrientDB finished in 0.5814375877380371
+2022-11-17 21:05:05,114 - INFO - CPU average: 64.1 %, MEM average: 1503.5078125 MB
+2022-11-17 21:05:05,114 - INFO - Starting benchmark bench_add_single_node with OrientDB
+2022-11-17 21:05:05,114 - INFO - Entering suppression mode for OrientDB
+2022-11-17 21:05:05,114 - INFO - Adding 2000 nodes to OrientDB
+2022-11-17 21:05:05,115 - INFO - Exiting suppression mode for OrientDB
+2022-11-17 21:05:05,115 - INFO - Overhead is 0.0012464523315429688
+2022-11-17 21:05:05,514 - INFO - Profiler initialized for OrientDB with pids [18604, 27904]
+2022-11-17 21:05:05,514 - INFO - Profiler started
+2022-11-17 21:05:05,514 - INFO - Adding 2000 nodes to OrientDB
+2022-11-17 21:05:07,640 - INFO - Profiler stopped
+2022-11-17 21:05:07,640 - INFO - Benchmark bench_add_single_node with OrientDB finished in 0.7069175243377686
+2022-11-17 21:05:07,640 - INFO - CPU average: 16.9 %, MEM average: 1449.98046875 MB
+2022-11-17 21:05:07,640 - INFO - Starting benchmark bench_add_single_node with OrientDB
+2022-11-17 21:05:07,640 - INFO - Entering suppression mode for OrientDB
+2022-11-17 21:05:07,640 - INFO - Adding 3000 nodes to OrientDB
+2022-11-17 21:05:07,644 - INFO - Exiting suppression mode for OrientDB
+2022-11-17 21:05:07,644 - INFO - Overhead is 0.003112316131591797
+2022-11-17 21:05:07,988 - INFO - Profiler initialized for OrientDB with pids [18604, 27904]
+2022-11-17 21:05:07,988 - INFO - Profiler started
+2022-11-17 21:05:07,988 - INFO - Adding 3000 nodes to OrientDB
+2022-11-17 21:05:10,109 - INFO - Profiler stopped
+2022-11-17 21:05:10,109 - INFO - Benchmark bench_add_single_node with OrientDB finished in 0.9686181545257568
+2022-11-17 21:05:10,109 - INFO - CPU average: 17.2 %, MEM average: 1481.23828125 MB
+2022-11-17 21:05:10,109 - INFO - Starting benchmark bench_add_single_node with OrientDB
+2022-11-17 21:05:10,109 - INFO - Entering suppression mode for OrientDB
+2022-11-17 21:05:10,109 - INFO - Adding 4000 nodes to OrientDB
+2022-11-17 21:05:10,112 - INFO - Exiting suppression mode for OrientDB
+2022-11-17 21:05:10,112 - INFO - Overhead is 0.0025048255920410156
+2022-11-17 21:05:10,494 - INFO - Profiler initialized for OrientDB with pids [18604, 27904]
+2022-11-17 21:05:10,494 - INFO - Profiler started
+2022-11-17 21:05:10,494 - INFO - Adding 4000 nodes to OrientDB
+2022-11-17 21:05:12,619 - INFO - Profiler stopped
+2022-11-17 21:05:12,619 - INFO - Benchmark bench_add_single_node with OrientDB finished in 1.202268362045288
+2022-11-17 21:05:12,619 - INFO - CPU average: 45.3 %, MEM average: 1476.140625 MB
+2022-11-17 21:05:12,619 - INFO - Starting benchmark bench_add_single_node with OrientDB
+2022-11-17 21:05:12,619 - INFO - Entering suppression mode for OrientDB
+2022-11-17 21:05:12,619 - INFO - Adding 5000 nodes to OrientDB
+2022-11-17 21:05:12,623 - INFO - Exiting suppression mode for OrientDB
+2022-11-17 21:05:12,623 - INFO - Overhead is 0.004020214080810547
+2022-11-17 21:05:12,979 - INFO - Profiler initialized for OrientDB with pids [18604, 27904]
+2022-11-17 21:05:12,979 - INFO - Profiler started
+2022-11-17 21:05:12,979 - INFO - Adding 5000 nodes to OrientDB
+2022-11-17 21:05:15,095 - INFO - Profiler stopped
+2022-11-17 21:05:15,095 - INFO - Benchmark bench_add_single_node with OrientDB finished in 1.3472836017608643
+2022-11-17 21:05:15,095 - INFO - CPU average: 23.1 %, MEM average: 1468.0078125 MB
+2022-11-17 21:05:15,095 - INFO - Starting benchmark bench_add_single_node with OrientDB
+2022-11-17 21:05:15,095 - INFO - Entering suppression mode for OrientDB
+2022-11-17 21:05:15,095 - INFO - Adding 6000 nodes to OrientDB
+2022-11-17 21:05:15,100 - INFO - Exiting suppression mode for OrientDB
+2022-11-17 21:05:15,100 - INFO - Overhead is 0.0050008296966552734
+2022-11-17 21:05:15,459 - INFO - Profiler initialized for OrientDB with pids [18604, 27904]
+2022-11-17 21:05:15,460 - INFO - Profiler started
+2022-11-17 21:05:15,460 - INFO - Adding 6000 nodes to OrientDB
+2022-11-17 21:05:17,587 - INFO - Profiler stopped
+2022-11-17 21:05:17,587 - INFO - Benchmark bench_add_single_node with OrientDB finished in 1.5620696544647217
+2022-11-17 21:05:17,587 - INFO - CPU average: 16.9 %, MEM average: 1455.4921875 MB
+2022-11-17 21:05:17,587 - INFO - Starting benchmark bench_add_single_node with OrientDB
+2022-11-17 21:05:17,587 - INFO - Entering suppression mode for OrientDB
+2022-11-17 21:05:17,587 - INFO - Adding 7000 nodes to OrientDB
+2022-11-17 21:05:17,592 - INFO - Exiting suppression mode for OrientDB
+2022-11-17 21:05:17,592 - INFO - Overhead is 0.0055027008056640625
+2022-11-17 21:05:17,942 - INFO - Profiler initialized for OrientDB with pids [18604, 27904]
+2022-11-17 21:05:17,942 - INFO - Profiler started
+2022-11-17 21:05:17,942 - INFO - Adding 7000 nodes to OrientDB
+2022-11-17 21:05:20,079 - INFO - Profiler stopped
+2022-11-17 21:05:20,079 - INFO - Benchmark bench_add_single_node with OrientDB finished in 1.8058435916900635
+2022-11-17 21:05:20,079 - INFO - CPU average: 18.5 %, MEM average: 1464.13671875 MB
+2022-11-17 21:05:20,079 - INFO - Starting benchmark bench_add_single_node with OrientDB
+2022-11-17 21:05:20,079 - INFO - Entering suppression mode for OrientDB
+2022-11-17 21:05:20,079 - INFO - Adding 8000 nodes to OrientDB
+2022-11-17 21:05:20,085 - INFO - Exiting suppression mode for OrientDB
+2022-11-17 21:05:20,085 - INFO - Overhead is 0.0060307979583740234
+2022-11-17 21:05:20,482 - INFO - Profiler initialized for OrientDB with pids [18604, 27904]
+2022-11-17 21:05:20,482 - INFO - Profiler started
+2022-11-17 21:05:20,482 - INFO - Adding 8000 nodes to OrientDB
+2022-11-17 21:05:22,616 - INFO - Profiler stopped
+2022-11-17 21:05:22,616 - INFO - Benchmark bench_add_single_node with OrientDB finished in 2.035714864730835
+2022-11-17 21:05:22,616 - INFO - CPU average: 1.5 %, MEM average: 1441.6875 MB
+2022-11-17 21:05:22,616 - INFO - Starting benchmark bench_add_single_node with OrientDB
+2022-11-17 21:05:22,616 - INFO - Entering suppression mode for OrientDB
+2022-11-17 21:05:22,616 - INFO - Adding 9000 nodes to OrientDB
+2022-11-17 21:05:22,622 - INFO - Exiting suppression mode for OrientDB
+2022-11-17 21:05:22,622 - INFO - Overhead is 0.00650477409362793
+2022-11-17 21:05:23,008 - INFO - Profiler initialized for OrientDB with pids [18604, 27904]
+2022-11-17 21:05:23,008 - INFO - Profiler started
+2022-11-17 21:05:23,009 - INFO - Adding 9000 nodes to OrientDB
+2022-11-17 21:05:27,266 - INFO - Profiler stopped
+2022-11-17 21:05:27,266 - INFO - Benchmark bench_add_single_node with OrientDB finished in 2.311682939529419
+2022-11-17 21:05:27,266 - INFO - CPU average: 1.55 %, MEM average: 1444.77734375 MB
+2022-11-17 21:05:27,266 - INFO - Starting benchmark bench_add_single_node with OrientDB
+2022-11-17 21:05:27,266 - INFO - Entering suppression mode for OrientDB
+2022-11-17 21:05:27,266 - INFO - Adding 10000 nodes to OrientDB
+2022-11-17 21:05:27,274 - INFO - Exiting suppression mode for OrientDB
+2022-11-17 21:05:27,274 - INFO - Overhead is 0.008018732070922852
+2022-11-17 21:05:27,612 - INFO - Profiler initialized for OrientDB with pids [18604, 27904]
+2022-11-17 21:05:27,612 - INFO - Profiler started
+2022-11-17 21:05:27,612 - INFO - Adding 10000 nodes to OrientDB
+2022-11-17 21:05:31,872 - INFO - Profiler stopped
+2022-11-17 21:05:31,872 - INFO - Benchmark bench_add_single_node with OrientDB finished in 2.5804436206817627
+2022-11-17 21:05:31,872 - INFO - CPU average: 24.150000000000002 %, MEM average: 1445.94140625 MB
+2022-11-17 21:05:31,872 - INFO - Saving data to Results/bench_add_single_node_OrientDB_iter_2022-11-17_21-05-31.bench
+2022-11-17 21:08:49,156 - INFO - Starting benchmark bench_add_single_node with OrientDB
+2022-11-17 21:08:49,156 - INFO - Entering suppression mode for OrientDB
+2022-11-17 21:08:49,156 - INFO - Adding 10000 nodes to OrientDB
+2022-11-17 21:08:49,164 - INFO - Exiting suppression mode for OrientDB
+2022-11-17 21:08:49,164 - INFO - Overhead is 0.008014202117919922
+2022-11-17 21:08:49,629 - INFO - Profiler initialized for OrientDB with pids [18604, 27904]
+2022-11-17 21:08:49,631 - INFO - Profiler started
+2022-11-17 21:08:49,631 - INFO - Adding 10000 nodes to OrientDB
+2022-11-17 21:08:53,874 - INFO - Profiler stopped
+2022-11-17 21:08:53,874 - INFO - Benchmark bench_add_single_node with OrientDB finished in 2.700002431869507
+2022-11-17 21:08:53,874 - INFO - CPU average: 9.4 %, MEM average: 1470.3828125 MB
+2022-11-17 21:08:53,874 - INFO - Starting benchmark bench_add_single_node with OrientDB
+2022-11-17 21:08:53,874 - INFO - Entering suppression mode for OrientDB
+2022-11-17 21:08:53,874 - INFO - Adding 20000 nodes to OrientDB
+2022-11-17 21:08:53,891 - INFO - Exiting suppression mode for OrientDB
+2022-11-17 21:08:53,892 - INFO - Overhead is 0.01747870445251465
+2022-11-17 21:08:54,299 - INFO - Profiler initialized for OrientDB with pids [18604, 27904]
+2022-11-17 21:08:54,301 - INFO - Profiler started
+2022-11-17 21:08:54,301 - INFO - Adding 20000 nodes to OrientDB
+2022-11-17 21:09:00,661 - INFO - Profiler stopped
+2022-11-17 21:09:00,661 - INFO - Benchmark bench_add_single_node with OrientDB finished in 5.163605690002441
+2022-11-17 21:09:00,661 - INFO - CPU average: 7.233333333333333 %, MEM average: 1445.8411458333333 MB
+2022-11-17 21:09:00,661 - INFO - Starting benchmark bench_add_single_node with OrientDB
+2022-11-17 21:09:00,661 - INFO - Entering suppression mode for OrientDB
+2022-11-17 21:09:00,661 - INFO - Adding 30000 nodes to OrientDB
+2022-11-17 21:09:00,684 - INFO - Exiting suppression mode for OrientDB
+2022-11-17 21:09:00,684 - INFO - Overhead is 0.02350306510925293
+2022-11-17 21:09:01,062 - INFO - Profiler initialized for OrientDB with pids [18604, 27904]
+2022-11-17 21:09:01,062 - INFO - Profiler started
+2022-11-17 21:09:01,062 - INFO - Adding 30000 nodes to OrientDB
+2022-11-17 21:09:09,568 - INFO - Profiler stopped
+2022-11-17 21:09:09,568 - INFO - Benchmark bench_add_single_node with OrientDB finished in 7.759995937347412
+2022-11-17 21:09:09,568 - INFO - CPU average: 1.9500000000000002 %, MEM average: 1448.4541015625 MB
+2022-11-17 21:09:09,568 - INFO - Starting benchmark bench_add_single_node with OrientDB
+2022-11-17 21:09:09,568 - INFO - Entering suppression mode for OrientDB
+2022-11-17 21:09:09,568 - INFO - Adding 40000 nodes to OrientDB
+2022-11-17 21:09:09,599 - INFO - Exiting suppression mode for OrientDB
+2022-11-17 21:09:09,601 - INFO - Overhead is 0.03207850456237793
+2022-11-17 21:09:10,002 - INFO - Profiler initialized for OrientDB with pids [18604, 27904]
+2022-11-17 21:09:10,002 - INFO - Profiler started
+2022-11-17 21:09:10,002 - INFO - Adding 40000 nodes to OrientDB
+2022-11-17 21:09:20,638 - INFO - Profiler stopped
+2022-11-17 21:09:20,638 - INFO - Benchmark bench_add_single_node with OrientDB finished in 10.133424997329712
+2022-11-17 21:09:20,638 - INFO - CPU average: 8.0 %, MEM average: 1446.86171875 MB
+2022-11-17 21:09:20,638 - INFO - Starting benchmark bench_add_single_node with OrientDB
+2022-11-17 21:09:20,638 - INFO - Entering suppression mode for OrientDB
+2022-11-17 21:09:20,638 - INFO - Adding 50000 nodes to OrientDB
+2022-11-17 21:09:20,683 - INFO - Exiting suppression mode for OrientDB
+2022-11-17 21:09:20,683 - INFO - Overhead is 0.044838905334472656
+2022-11-17 21:09:21,091 - INFO - Profiler initialized for OrientDB with pids [18604, 27904]
+2022-11-17 21:09:21,091 - INFO - Profiler started
+2022-11-17 21:09:21,091 - INFO - Adding 50000 nodes to OrientDB
+2022-11-17 21:09:33,871 - INFO - Profiler stopped
+2022-11-17 21:09:33,871 - INFO - Benchmark bench_add_single_node with OrientDB finished in 12.644149780273438
+2022-11-17 21:09:33,871 - INFO - CPU average: 3.0833333333333335 %, MEM average: 1450.2532552083333 MB
+2022-11-17 21:09:33,871 - INFO - Starting benchmark bench_add_single_node with OrientDB
+2022-11-17 21:09:33,871 - INFO - Entering suppression mode for OrientDB
+2022-11-17 21:09:33,871 - INFO - Adding 60000 nodes to OrientDB
+2022-11-17 21:09:33,918 - INFO - Exiting suppression mode for OrientDB
+2022-11-17 21:09:33,918 - INFO - Overhead is 0.04658222198486328
+2022-11-17 21:09:34,348 - INFO - Profiler initialized for OrientDB with pids [18604, 27904]
+2022-11-17 21:09:34,349 - INFO - Profiler started
+2022-11-17 21:09:34,349 - INFO - Adding 60000 nodes to OrientDB
+2022-11-17 21:09:51,412 - INFO - Profiler stopped
+2022-11-17 21:09:51,412 - INFO - Benchmark bench_add_single_node with OrientDB finished in 15.31776475906372
+2022-11-17 21:09:51,412 - INFO - CPU average: 4.8 %, MEM average: 1453.60400390625 MB
+2022-11-17 21:09:51,412 - INFO - Starting benchmark bench_add_single_node with OrientDB
+2022-11-17 21:09:51,412 - INFO - Entering suppression mode for OrientDB
+2022-11-17 21:09:51,412 - INFO - Adding 70000 nodes to OrientDB
+2022-11-17 21:09:51,467 - INFO - Exiting suppression mode for OrientDB
+2022-11-17 21:09:51,467 - INFO - Overhead is 0.05460357666015625
+2022-11-17 21:09:51,825 - INFO - Profiler initialized for OrientDB with pids [18604, 27904]
+2022-11-17 21:09:51,826 - INFO - Profiler started
+2022-11-17 21:09:51,826 - INFO - Adding 70000 nodes to OrientDB
+2022-11-17 21:10:11,004 - INFO - Profiler stopped
+2022-11-17 21:10:11,004 - INFO - Benchmark bench_add_single_node with OrientDB finished in 17.833216190338135
+2022-11-17 21:10:11,004 - INFO - CPU average: 0.3333333333333333 %, MEM average: 1456.7356770833333 MB
+2022-11-17 21:10:11,004 - INFO - Starting benchmark bench_add_single_node with OrientDB
+2022-11-17 21:10:11,004 - INFO - Entering suppression mode for OrientDB
+2022-11-17 21:10:11,004 - INFO - Adding 80000 nodes to OrientDB
+2022-11-17 21:10:11,065 - INFO - Exiting suppression mode for OrientDB
+2022-11-17 21:10:11,066 - INFO - Overhead is 0.0626223087310791
+2022-11-17 21:10:11,417 - INFO - Profiler initialized for OrientDB with pids [18604, 27904]
+2022-11-17 21:10:11,417 - INFO - Profiler started
+2022-11-17 21:10:11,417 - INFO - Adding 80000 nodes to OrientDB
+2022-11-17 21:10:32,724 - INFO - Profiler stopped
+2022-11-17 21:10:32,724 - INFO - Benchmark bench_add_single_node with OrientDB finished in 20.42567467689514
+2022-11-17 21:10:32,724 - INFO - CPU average: 17.44 %, MEM average: 1461.189453125 MB
+2022-11-17 21:10:32,724 - INFO - Starting benchmark bench_add_single_node with OrientDB
+2022-11-17 21:10:32,724 - INFO - Entering suppression mode for OrientDB
+2022-11-17 21:10:32,724 - INFO - Adding 90000 nodes to OrientDB
+2022-11-17 21:10:32,795 - INFO - Exiting suppression mode for OrientDB
+2022-11-17 21:10:32,795 - INFO - Overhead is 0.07121109962463379
+2022-11-17 21:10:33,143 - INFO - Profiler initialized for OrientDB with pids [18604, 27904]
+2022-11-17 21:10:33,143 - INFO - Profiler started
+2022-11-17 21:10:33,143 - INFO - Adding 90000 nodes to OrientDB
+2022-11-17 21:10:56,527 - INFO - Profiler stopped
+2022-11-17 21:10:56,527 - INFO - Benchmark bench_add_single_node with OrientDB finished in 22.91715669631958
+2022-11-17 21:10:56,527 - INFO - CPU average: 0.6909090909090909 %, MEM average: 1491.0880681818182 MB
+2022-11-17 21:10:56,527 - INFO - Starting benchmark bench_add_single_node with OrientDB
+2022-11-17 21:10:56,527 - INFO - Entering suppression mode for OrientDB
+2022-11-17 21:10:56,527 - INFO - Adding 100000 nodes to OrientDB
+2022-11-17 21:10:56,607 - INFO - Exiting suppression mode for OrientDB
+2022-11-17 21:10:56,607 - INFO - Overhead is 0.0796670913696289
+2022-11-17 21:10:56,991 - INFO - Profiler initialized for OrientDB with pids [18604, 27904]
+2022-11-17 21:10:56,992 - INFO - Profiler started
+2022-11-17 21:10:56,992 - INFO - Adding 100000 nodes to OrientDB
+2022-11-17 21:11:22,500 - INFO - Profiler stopped
+2022-11-17 21:11:22,500 - INFO - Benchmark bench_add_single_node with OrientDB finished in 25.37518310546875
+2022-11-17 21:11:22,500 - INFO - CPU average: 0.8999999999999999 %, MEM average: 1497.2932942708333 MB
+2022-11-17 21:11:22,500 - INFO - Saving data to Results/bench_add_single_node_OrientDB_iter_2022-11-17_21-11-22.bench
+2022-11-17 21:15:09,173 - INFO - Starting benchmark bench_add_single_node with OrientDB
+2022-11-17 21:15:09,173 - INFO - Entering suppression mode for OrientDB
+2022-11-17 21:15:09,173 - INFO - Adding 10000 nodes to OrientDB
+2022-11-17 21:15:09,181 - INFO - Exiting suppression mode for OrientDB
+2022-11-17 21:15:09,181 - INFO - Overhead is 0.00802302360534668
+2022-11-17 21:15:09,562 - INFO - Profiler initialized for OrientDB with pids [18604, 27904]
+2022-11-17 21:15:09,562 - INFO - Profiler started
+2022-11-17 21:15:09,563 - INFO - Adding 10000 nodes to OrientDB
+2022-11-17 21:15:13,809 - INFO - Profiler stopped
+2022-11-17 21:15:13,809 - INFO - Benchmark bench_add_single_node with OrientDB finished in 2.7027833461761475
+2022-11-17 21:15:13,809 - INFO - CPU average: 6.25 %, MEM average: 1524.9453125 MB
+2022-11-17 21:15:13,809 - INFO - Starting benchmark bench_add_single_node with OrientDB
+2022-11-17 21:15:13,809 - INFO - Entering suppression mode for OrientDB
+2022-11-17 21:15:13,809 - INFO - Adding 20000 nodes to OrientDB
+2022-11-17 21:15:13,826 - INFO - Exiting suppression mode for OrientDB
+2022-11-17 21:15:13,827 - INFO - Overhead is 0.017528533935546875
+2022-11-17 21:15:14,203 - INFO - Profiler initialized for OrientDB with pids [18604, 27904]
+2022-11-17 21:15:14,204 - INFO - Profiler started
+2022-11-17 21:15:14,204 - INFO - Adding 20000 nodes to OrientDB
+2022-11-17 21:15:20,583 - INFO - Profiler stopped
+2022-11-17 21:15:20,583 - INFO - Benchmark bench_add_single_node with OrientDB finished in 5.259551763534546
+2022-11-17 21:15:20,583 - INFO - CPU average: 4.666666666666667 %, MEM average: 1509.5325520833333 MB
+2022-11-17 21:15:20,583 - INFO - Starting benchmark bench_add_single_node with OrientDB
+2022-11-17 21:15:20,583 - INFO - Entering suppression mode for OrientDB
+2022-11-17 21:15:20,583 - INFO - Adding 30000 nodes to OrientDB
+2022-11-17 21:15:20,607 - INFO - Exiting suppression mode for OrientDB
+2022-11-17 21:15:20,607 - INFO - Overhead is 0.024546384811401367
+2022-11-17 21:15:21,025 - INFO - Profiler initialized for OrientDB with pids [18604, 27904]
+2022-11-17 21:15:21,025 - INFO - Profiler started
+2022-11-17 21:15:21,025 - INFO - Adding 30000 nodes to OrientDB
+2022-11-17 21:15:29,518 - INFO - Profiler stopped
+2022-11-17 21:15:29,518 - INFO - Benchmark bench_add_single_node with OrientDB finished in 7.9153947830200195
+2022-11-17 21:15:29,518 - INFO - CPU average: 1.55 %, MEM average: 1509.8125 MB
+2022-11-17 21:15:29,518 - INFO - Starting benchmark bench_add_single_node with OrientDB
+2022-11-17 21:15:29,518 - INFO - Entering suppression mode for OrientDB
+2022-11-17 21:15:29,518 - INFO - Adding 40000 nodes to OrientDB
+2022-11-17 21:15:29,551 - INFO - Exiting suppression mode for OrientDB
+2022-11-17 21:15:29,551 - INFO - Overhead is 0.03380942344665527
+2022-11-17 21:15:30,028 - INFO - Profiler initialized for OrientDB with pids [18604, 27904]
+2022-11-17 21:15:30,030 - INFO - Profiler started
+2022-11-17 21:15:30,030 - INFO - Adding 40000 nodes to OrientDB
+2022-11-17 21:15:40,678 - INFO - Profiler stopped
+2022-11-17 21:15:40,678 - INFO - Benchmark bench_add_single_node with OrientDB finished in 10.520703315734863
+2022-11-17 21:15:40,678 - INFO - CPU average: 0.3 %, MEM average: 1513.4390625 MB
+2022-11-17 21:15:40,678 - INFO - Starting benchmark bench_add_single_node with OrientDB
+2022-11-17 21:15:40,678 - INFO - Entering suppression mode for OrientDB
+2022-11-17 21:15:40,678 - INFO - Adding 50000 nodes to OrientDB
+2022-11-17 21:15:40,720 - INFO - Exiting suppression mode for OrientDB
+2022-11-17 21:15:40,720 - INFO - Overhead is 0.041938066482543945
+2022-11-17 21:15:41,141 - INFO - Profiler initialized for OrientDB with pids [18604, 27904]
+2022-11-17 21:15:41,141 - INFO - Profiler started
+2022-11-17 21:15:41,141 - INFO - Adding 50000 nodes to OrientDB
+2022-11-17 21:15:56,062 - INFO - Profiler stopped
+2022-11-17 21:15:56,062 - INFO - Benchmark bench_add_single_node with OrientDB finished in 13.483749866485596
+2022-11-17 21:15:56,062 - INFO - CPU average: 11.271428571428572 %, MEM average: 1513.5931919642858 MB
+2022-11-17 21:15:56,062 - INFO - Starting benchmark bench_add_single_node with OrientDB
+2022-11-17 21:15:56,062 - INFO - Entering suppression mode for OrientDB
+2022-11-17 21:15:56,062 - INFO - Adding 60000 nodes to OrientDB
+2022-11-17 21:15:56,112 - INFO - Exiting suppression mode for OrientDB
+2022-11-17 21:15:56,112 - INFO - Overhead is 0.04951739311218262
+2022-11-17 21:15:56,499 - INFO - Profiler initialized for OrientDB with pids [18604, 27904]
+2022-11-17 21:15:56,499 - INFO - Profiler started
+2022-11-17 21:15:56,499 - INFO - Adding 60000 nodes to OrientDB
+2022-11-17 21:16:13,509 - INFO - Profiler stopped
+2022-11-17 21:16:13,509 - INFO - Benchmark bench_add_single_node with OrientDB finished in 16.069694757461548
+2022-11-17 21:16:13,509 - INFO - CPU average: 0.775 %, MEM average: 1513.72705078125 MB
+2022-11-17 21:16:13,509 - INFO - Starting benchmark bench_add_single_node with OrientDB
+2022-11-17 21:16:13,509 - INFO - Entering suppression mode for OrientDB
+2022-11-17 21:16:13,509 - INFO - Adding 70000 nodes to OrientDB
+2022-11-17 21:16:13,568 - INFO - Exiting suppression mode for OrientDB
+2022-11-17 21:16:13,568 - INFO - Overhead is 0.05861997604370117
+2022-11-17 21:16:13,953 - INFO - Profiler initialized for OrientDB with pids [18604, 27904]
+2022-11-17 21:16:13,953 - INFO - Profiler started
+2022-11-17 21:16:13,953 - INFO - Adding 70000 nodes to OrientDB
+2022-11-17 21:16:33,122 - INFO - Profiler stopped
+2022-11-17 21:16:33,122 - INFO - Benchmark bench_add_single_node with OrientDB finished in 18.629759788513184
+2022-11-17 21:16:33,122 - INFO - CPU average: 5.855555555555556 %, MEM average: 1513.8072916666667 MB
+2022-11-17 21:16:33,122 - INFO - Starting benchmark bench_add_single_node with OrientDB
+2022-11-17 21:16:33,122 - INFO - Entering suppression mode for OrientDB
+2022-11-17 21:16:33,122 - INFO - Adding 80000 nodes to OrientDB
+2022-11-17 21:16:33,188 - INFO - Exiting suppression mode for OrientDB
+2022-11-17 21:16:33,188 - INFO - Overhead is 0.06664252281188965
+2022-11-17 21:16:33,577 - INFO - Profiler initialized for OrientDB with pids [18604, 27904]
+2022-11-17 21:16:33,578 - INFO - Profiler started
+2022-11-17 21:16:33,578 - INFO - Adding 80000 nodes to OrientDB
+2022-11-17 21:16:56,997 - INFO - Profiler stopped
+2022-11-17 21:16:56,997 - INFO - Benchmark bench_add_single_node with OrientDB finished in 21.406824350357056
+2022-11-17 21:16:56,997 - INFO - CPU average: 6.881818181818182 %, MEM average: 1543.897372159091 MB
+2022-11-17 21:16:56,997 - INFO - Starting benchmark bench_add_single_node with OrientDB
+2022-11-17 21:16:56,997 - INFO - Entering suppression mode for OrientDB
+2022-11-17 21:16:56,997 - INFO - Adding 90000 nodes to OrientDB
+2022-11-17 21:16:57,070 - INFO - Exiting suppression mode for OrientDB
+2022-11-17 21:16:57,070 - INFO - Overhead is 0.07330632209777832
+2022-11-17 21:16:57,440 - INFO - Profiler initialized for OrientDB with pids [18604, 27904]
+2022-11-17 21:16:57,440 - INFO - Profiler started
+2022-11-17 21:16:57,440 - INFO - Adding 90000 nodes to OrientDB
+2022-11-17 21:17:23,018 - INFO - Profiler stopped
+2022-11-17 21:17:23,018 - INFO - Benchmark bench_add_single_node with OrientDB finished in 23.937533855438232
+2022-11-17 21:17:23,018 - INFO - CPU average: 0.5083333333333333 %, MEM average: 1544.0091145833333 MB
+2022-11-17 21:17:23,018 - INFO - Starting benchmark bench_add_single_node with OrientDB
+2022-11-17 21:17:23,018 - INFO - Entering suppression mode for OrientDB
+2022-11-17 21:17:23,018 - INFO - Adding 100000 nodes to OrientDB
+2022-11-17 21:17:23,099 - INFO - Exiting suppression mode for OrientDB
+2022-11-17 21:17:23,099 - INFO - Overhead is 0.08110928535461426
+2022-11-17 21:17:23,450 - INFO - Profiler initialized for OrientDB with pids [18604, 27904]
+2022-11-17 21:17:23,450 - INFO - Profiler started
+2022-11-17 21:17:23,450 - INFO - Adding 100000 nodes to OrientDB
+2022-11-17 21:17:51,158 - INFO - Profiler stopped
+2022-11-17 21:17:51,158 - INFO - Benchmark bench_add_single_node with OrientDB finished in 26.365779876708984
+2022-11-17 21:17:51,158 - INFO - CPU average: 0.8384615384615385 %, MEM average: 1546.6646634615386 MB
+2022-11-17 21:17:51,158 - INFO - Saving data to Results/bench_add_single_node_OrientDB_iter_2022-11-17_21-17-51.bench

@@ -1,6 +1,7 @@
 import psutil
 from neo4j import GraphDatabase
 from pyArango.connection import *
+import pyorient
 
 
 class GraphDriver:
@@ -152,3 +153,48 @@ class ArangoDB(GraphDriver):
 
     def __str__(self):
         return "ArangoDB"
+
+
+class OrientDB(GraphDriver):
+    def __init__(self, uri, user, password):
+        super().__init__()
+        self.client = pyorient.OrientDB(uri, 2424)
+        self.client.set_session_token(True)
+        self.session_id = self.client.connect(user, password)
+        if "benchmark" not in self.client.db_list().oRecordData["databases"].keys():
+            self.client.db_create("benchmark", pyorient.DB_TYPE_GRAPH, pyorient.STORAGE_TYPE_MEMORY)
+        self.client.db_open("benchmark", user, password)
+
+    def query(self, q):
+        res = None
+        if not self._suppressed:
+            res = self.client.command(q)
+        return res
+
+    def clear(self):
+        self.query("DELETE VERTEX V")
+        self.query("DELETE EDGE E")
+
+    def add_node(self, nid: int, labels: list[str], properties: dict):
+        # add node to orient
+        properties.update({"id": nid})
+        q = f"CREATE VERTEX V content {properties}"
+        self.query(q)
+
+    def add_edge(self, src: str, dst: str, labels: list[str], properties: dict):
+        # add edge from src to dst to orient
+        q = f"CREATE EDGE E FROM (SELECT FROM V WHERE id = \"{src}\") TO (SELECT FROM V WHERE id = \"{dst}\")"
+        q += f" content {properties}"
+        self.query(q)
+
+    def get_single_node(self, labels: list[str], properties: dict):
+        q = "SELECT FROM V WHERE "
+        q += " AND ".join([f"{k} = \"{v}\"" for k, v in properties.items()])
+        return self.query(q)
+
+    def get_pids(self):
+        return [p.pid for p in psutil.process_iter() if p.name() == "java.exe" and
+                [item for item in p.cmdline() if "orientdb" in item]]
+
+    def __str__(self):
+        return "OrientDB"

@@ -2,31 +2,27 @@ import matplotlib.pyplot as plt
 from tkinter import filedialog
 
 
-def show_single_bench(path: str, ):
-    time = []
-    cpu_usage = []
-    memory_usage = []
-    with open(path, "r") as file:
-        for line in file:
-            if line[0] == "#" or line[0] == "t" or line == "":
-                continue
-            t, cpu, mem = line.strip().split(",")
-            time.append(float(t))
-            cpu_usage.append(float(cpu))
-            memory_usage.append(float(mem))
-    plt.plot(time, cpu_usage, label="CPU usage")
-    # secon y axis for memory
-    ax2 = plt.twinx()
-    ax2.plot(time, memory_usage, label="Memory usage", color="red")
-    #plt.plot(time, memory_usage, label="Memory usage")
-    plt.xlabel("Time")
-    plt.ylabel("CPU usage")
-    ax2.set_ylabel("Memory usage")
-    #plt.ylabel("Usage")
+def show_single_bench(path: str, d_filter: list = None):
+    with open(path, "r") as f:
+        head = f.readline().strip().split(",")
+        data = [[] for _ in head]
+        for line in f:
+            for i, v in enumerate(line.strip().split(",")):
+                data[i].append(float(v))
+    x_axis_name = [h for h in head if h[0] == "_"][0]
+    x_axis = data[head.index(x_axis_name)]
+    head.remove(x_axis_name)
+    data.remove(x_axis)
+    if d_filter:
+        data = [d for d, h in zip(data, head) if h in d_filter]
+        head = [h for h in head if h in d_filter]
+    for d, h in zip(data, head):
+        plt.plot(x_axis, d, label=h)
+    plt.xlabel(x_axis_name)
     plt.legend()
     plt.show()
 
 
 if __name__ == "__main__":
     path = filedialog.askopenfilename()
-    show_single_bench(path)
+    show_single_bench(path, ["CPU", "TIME"])
