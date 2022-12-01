@@ -960,3 +960,356 @@ Failed to establish connection to ResolvedIPv6Address(('::1', 7687, 0, 0)) (reas
 2022-11-17 21:17:51,158 - INFO - Benchmark bench_add_single_node with OrientDB finished in 26.365779876708984
 2022-11-17 21:17:51,158 - INFO - CPU average: 0.8384615384615385 %, MEM average: 1546.6646634615386 MB
 2022-11-17 21:17:51,158 - INFO - Saving data to Results/bench_add_single_node_OrientDB_iter_2022-11-17_21-17-51.bench
+2022-11-18 15:02:39,461 - INFO - Starting benchmark bench_add_single_node with NEO4j
+2022-11-18 15:02:39,461 - INFO - Entering suppression mode for NEO4j
+2022-11-18 15:02:39,462 - INFO - Adding 10000 nodes to NEO4j
+2022-11-18 15:02:39,597 - INFO - Exiting suppression mode for NEO4j
+2022-11-18 15:02:39,597 - INFO - Overhead is 0.13649702072143555
+2022-11-18 15:02:39,999 - INFO - Profiler initialized for NEO4j with pids [11012, 26544]
+2022-11-18 15:02:40,000 - INFO - Profiler started
+2022-11-18 15:02:40,000 - INFO - Adding 10000 nodes to NEO4j
+2022-11-18 15:03:03,448 - INFO - Profiler stopped
+2022-11-18 15:03:03,448 - INFO - Benchmark bench_add_single_node with NEO4j finished in 22.825780630111694
+2022-11-18 15:03:03,448 - INFO - CPU average: 46.73636363636364 %, MEM average: 1058.0266335227273 MB
+2022-11-18 15:03:03,448 - INFO - Starting benchmark bench_add_single_node with NEO4j
+2022-11-18 15:03:03,448 - INFO - Entering suppression mode for NEO4j
+2022-11-18 15:03:03,448 - INFO - Adding 20000 nodes to NEO4j
+2022-11-18 15:03:03,712 - INFO - Exiting suppression mode for NEO4j
+2022-11-18 15:03:03,712 - INFO - Overhead is 0.26407432556152344
+2022-11-18 15:03:04,133 - INFO - Profiler initialized for NEO4j with pids [11012, 26544]
+2022-11-18 15:03:04,133 - INFO - Profiler started
+2022-11-18 15:03:04,133 - INFO - Adding 20000 nodes to NEO4j
+2022-11-18 15:03:18,596 - INFO - Starting benchmark bench_add_single_node with NEO4j
+2022-11-18 15:03:18,596 - INFO - Entering suppression mode for NEO4j
+2022-11-18 15:03:18,596 - INFO - Adding 1000 nodes to NEO4j
+2022-11-18 15:03:18,619 - INFO - Exiting suppression mode for NEO4j
+2022-11-18 15:03:18,619 - INFO - Overhead is 0.022813081741333008
+2022-11-18 15:03:19,146 - INFO - Profiler initialized for NEO4j with pids [11012, 26544]
+2022-11-18 15:03:19,147 - INFO - Profiler started
+2022-11-18 15:03:19,147 - INFO - Adding 1000 nodes to NEO4j
+2022-11-18 15:03:21,276 - INFO - Profiler stopped
+2022-11-18 15:03:21,276 - INFO - Benchmark bench_add_single_node with NEO4j finished in 1.5196154117584229
+2022-11-18 15:03:21,276 - INFO - CPU average: 24.6 %, MEM average: 1064.83203125 MB
+2022-11-18 15:03:21,276 - INFO - Starting benchmark bench_add_single_node with NEO4j
+2022-11-18 15:03:21,276 - INFO - Entering suppression mode for NEO4j
+2022-11-18 15:03:21,276 - INFO - Adding 2000 nodes to NEO4j
+2022-11-18 15:03:21,303 - INFO - Exiting suppression mode for NEO4j
+2022-11-18 15:03:21,303 - INFO - Overhead is 0.026559114456176758
+2022-11-18 15:03:21,707 - INFO - Profiler initialized for NEO4j with pids [11012, 26544]
+2022-11-18 15:03:21,707 - INFO - Profiler started
+2022-11-18 15:03:21,707 - INFO - Adding 2000 nodes to NEO4j
+2022-11-18 15:03:25,973 - INFO - Profiler stopped
+2022-11-18 15:03:25,973 - INFO - Benchmark bench_add_single_node with NEO4j finished in 2.690243721008301
+2022-11-18 15:03:25,973 - INFO - CPU average: 15.4 %, MEM average: 1052.28515625 MB
+2022-11-18 15:03:25,973 - INFO - Starting benchmark bench_add_single_node with NEO4j
+2022-11-18 15:03:25,973 - INFO - Entering suppression mode for NEO4j
+2022-11-18 15:03:25,973 - INFO - Adding 3000 nodes to NEO4j
+2022-11-18 15:03:26,011 - INFO - Exiting suppression mode for NEO4j
+2022-11-18 15:03:26,011 - INFO - Overhead is 0.038584232330322266
+2022-11-18 15:03:26,426 - INFO - Profiler initialized for NEO4j with pids [11012, 26544]
+2022-11-18 15:03:26,426 - INFO - Profiler started
+2022-11-18 15:03:26,426 - INFO - Adding 3000 nodes to NEO4j
+2022-11-18 15:03:32,809 - INFO - Profiler stopped
+2022-11-18 15:03:32,809 - INFO - Benchmark bench_add_single_node with NEO4j finished in 4.215070962905884
+2022-11-18 15:03:32,809 - INFO - CPU average: 22.8 %, MEM average: 1069.9166666666667 MB
+2022-11-18 15:03:32,809 - INFO - Starting benchmark bench_add_single_node with NEO4j
+2022-11-18 15:03:32,809 - INFO - Entering suppression mode for NEO4j
+2022-11-18 15:03:32,809 - INFO - Adding 4000 nodes to NEO4j
+2022-11-18 15:03:32,860 - INFO - Exiting suppression mode for NEO4j
+2022-11-18 15:03:32,860 - INFO - Overhead is 0.051544189453125
+2022-11-18 15:03:33,293 - INFO - Profiler initialized for NEO4j with pids [11012, 26544]
+2022-11-18 15:03:33,293 - INFO - Profiler started
+2022-11-18 15:03:33,293 - INFO - Adding 4000 nodes to NEO4j
+2022-11-18 15:03:39,689 - INFO - Profiler stopped
+2022-11-18 15:03:39,689 - INFO - Benchmark bench_add_single_node with NEO4j finished in 5.617393493652344
+2022-11-18 15:03:39,689 - INFO - CPU average: 23.133333333333336 %, MEM average: 1065.5325520833333 MB
+2022-11-18 15:03:39,689 - INFO - Starting benchmark bench_add_single_node with NEO4j
+2022-11-18 15:03:39,689 - INFO - Entering suppression mode for NEO4j
+2022-11-18 15:03:39,689 - INFO - Adding 5000 nodes to NEO4j
+2022-11-18 15:03:39,754 - INFO - Exiting suppression mode for NEO4j
+2022-11-18 15:03:39,754 - INFO - Overhead is 0.06463384628295898
+2022-11-18 15:03:40,170 - INFO - Profiler initialized for NEO4j with pids [11012, 26544]
+2022-11-18 15:03:40,170 - INFO - Profiler started
+2022-11-18 15:03:40,170 - INFO - Adding 5000 nodes to NEO4j
+2022-11-18 15:03:48,692 - INFO - Profiler stopped
+2022-11-18 15:03:48,692 - INFO - Benchmark bench_add_single_node with NEO4j finished in 6.969007253646851
+2022-11-18 15:03:48,692 - INFO - CPU average: 13.55 %, MEM average: 1068.9794921875 MB
+2022-11-18 15:03:48,692 - INFO - Starting benchmark bench_add_single_node with NEO4j
+2022-11-18 15:03:48,692 - INFO - Entering suppression mode for NEO4j
+2022-11-18 15:03:48,692 - INFO - Adding 6000 nodes to NEO4j
+2022-11-18 15:03:48,771 - INFO - Exiting suppression mode for NEO4j
+2022-11-18 15:03:48,771 - INFO - Overhead is 0.07812952995300293
+2022-11-18 15:03:49,183 - INFO - Profiler initialized for NEO4j with pids [11012, 26544]
+2022-11-18 15:03:49,184 - INFO - Profiler started
+2022-11-18 15:03:49,184 - INFO - Adding 6000 nodes to NEO4j
+2022-11-18 15:03:59,807 - INFO - Profiler stopped
+2022-11-18 15:03:59,808 - INFO - Benchmark bench_add_single_node with NEO4j finished in 8.4296555519104
+2022-11-18 15:03:59,808 - INFO - CPU average: 12.680000000000001 %, MEM average: 1069.88046875 MB
+2022-11-18 15:03:59,808 - INFO - Starting benchmark bench_add_single_node with NEO4j
+2022-11-18 15:03:59,808 - INFO - Entering suppression mode for NEO4j
+2022-11-18 15:03:59,808 - INFO - Adding 7000 nodes to NEO4j
+2022-11-18 15:03:59,897 - INFO - Exiting suppression mode for NEO4j
+2022-11-18 15:03:59,897 - INFO - Overhead is 0.08886289596557617
+2022-11-18 15:04:00,312 - INFO - Profiler initialized for NEO4j with pids [11012, 26544]
+2022-11-18 15:04:00,312 - INFO - Profiler started
+2022-11-18 15:04:00,312 - INFO - Adding 7000 nodes to NEO4j
+2022-11-18 15:04:10,995 - INFO - Profiler stopped
+2022-11-18 15:04:10,995 - INFO - Benchmark bench_add_single_node with NEO4j finished in 9.964796543121338
+2022-11-18 15:04:10,995 - INFO - CPU average: 13.879999999999999 %, MEM average: 1069.9625 MB
+2022-11-18 15:04:10,995 - INFO - Starting benchmark bench_add_single_node with NEO4j
+2022-11-18 15:04:10,995 - INFO - Entering suppression mode for NEO4j
+2022-11-18 15:04:10,995 - INFO - Adding 8000 nodes to NEO4j
+2022-11-18 15:04:11,099 - INFO - Exiting suppression mode for NEO4j
+2022-11-18 15:04:11,099 - INFO - Overhead is 0.10383892059326172
+2022-11-18 15:04:11,504 - INFO - Profiler initialized for NEO4j with pids [11012, 26544]
+2022-11-18 15:04:11,504 - INFO - Profiler started
+2022-11-18 15:04:11,504 - INFO - Adding 8000 nodes to NEO4j
+2022-11-18 15:04:24,301 - INFO - Profiler stopped
+2022-11-18 15:04:24,301 - INFO - Benchmark bench_add_single_node with NEO4j finished in 11.59631609916687
+2022-11-18 15:04:24,301 - INFO - CPU average: 13.383333333333333 %, MEM average: 1069.9759114583333 MB
+2022-11-18 15:04:24,301 - INFO - Starting benchmark bench_add_single_node with NEO4j
+2022-11-18 15:04:24,301 - INFO - Entering suppression mode for NEO4j
+2022-11-18 15:04:24,301 - INFO - Adding 9000 nodes to NEO4j
+2022-11-18 15:04:24,421 - INFO - Exiting suppression mode for NEO4j
+2022-11-18 15:04:24,421 - INFO - Overhead is 0.11968827247619629
+2022-11-18 15:04:24,819 - INFO - Profiler initialized for NEO4j with pids [11012, 26544]
+2022-11-18 15:04:24,820 - INFO - Profiler started
+2022-11-18 15:04:24,820 - INFO - Adding 9000 nodes to NEO4j
+2022-11-18 15:04:39,736 - INFO - Profiler stopped
+2022-11-18 15:04:39,736 - INFO - Benchmark bench_add_single_node with NEO4j finished in 13.089740753173828
+2022-11-18 15:04:39,736 - INFO - CPU average: 16.071428571428573 %, MEM average: 1070.060825892857 MB
+2022-11-18 15:04:39,736 - INFO - Starting benchmark bench_add_single_node with NEO4j
+2022-11-18 15:04:39,736 - INFO - Entering suppression mode for NEO4j
+2022-11-18 15:04:39,736 - INFO - Adding 10000 nodes to NEO4j
+2022-11-18 15:04:39,870 - INFO - Exiting suppression mode for NEO4j
+2022-11-18 15:04:39,870 - INFO - Overhead is 0.13337206840515137
+2022-11-18 15:04:40,287 - INFO - Profiler initialized for NEO4j with pids [11012, 26544]
+2022-11-18 15:04:40,287 - INFO - Profiler started
+2022-11-18 15:04:40,287 - INFO - Adding 10000 nodes to NEO4j
+2022-11-18 15:04:55,163 - INFO - Profiler stopped
+2022-11-18 15:04:55,163 - INFO - Benchmark bench_add_single_node with NEO4j finished in 14.500635862350464
+2022-11-18 15:04:55,163 - INFO - CPU average: 15.471428571428573 %, MEM average: 1070.68359375 MB
+2022-11-18 15:04:55,163 - INFO - Saving data to Results/bench_add_single_node_NEO4j_iter_2022-11-18_15-04-55.bench
+2022-11-18 15:04:55,164 - INFO - Starting benchmark bench_add_single_node with ArangoDB
+2022-11-18 15:04:55,164 - INFO - Entering suppression mode for ArangoDB
+2022-11-18 15:04:55,164 - INFO - Adding 1000 nodes to ArangoDB
+2022-11-18 15:04:55,164 - INFO - Exiting suppression mode for ArangoDB
+2022-11-18 15:04:55,164 - INFO - Overhead is 0.0
+2022-11-18 15:04:55,482 - INFO - Profiler initialized for ArangoDB with pids [40232]
+2022-11-18 15:04:55,482 - INFO - Profiler started
+2022-11-18 15:04:55,482 - INFO - Adding 1000 nodes to ArangoDB
+2022-11-18 15:04:56,593 - INFO - Profiler stopped
+2022-11-18 15:04:56,593 - INFO - Benchmark bench_add_single_node with ArangoDB finished in 0.8214302062988281
+2022-11-18 15:04:56,593 - INFO - CPU average: 0.0 %, MEM average: 166.734375 MB
+2022-11-18 15:04:56,593 - INFO - Starting benchmark bench_add_single_node with ArangoDB
+2022-11-18 15:04:56,593 - INFO - Entering suppression mode for ArangoDB
+2022-11-18 15:04:56,593 - INFO - Adding 2000 nodes to ArangoDB
+2022-11-18 15:04:56,594 - INFO - Exiting suppression mode for ArangoDB
+2022-11-18 15:04:56,594 - INFO - Overhead is 0.001833200454711914
+2022-11-18 15:04:56,944 - INFO - Profiler initialized for ArangoDB with pids [40232]
+2022-11-18 15:04:56,945 - INFO - Profiler started
+2022-11-18 15:04:56,945 - INFO - Adding 2000 nodes to ArangoDB
+2022-11-18 15:04:59,184 - INFO - Profiler stopped
+2022-11-18 15:04:59,184 - INFO - Benchmark bench_add_single_node with ArangoDB finished in 1.6425111293792725
+2022-11-18 15:04:59,184 - INFO - CPU average: 0.75 %, MEM average: 167.2265625 MB
+2022-11-18 15:04:59,184 - INFO - Starting benchmark bench_add_single_node with ArangoDB
+2022-11-18 15:04:59,184 - INFO - Entering suppression mode for ArangoDB
+2022-11-18 15:04:59,184 - INFO - Adding 3000 nodes to ArangoDB
+2022-11-18 15:04:59,187 - INFO - Exiting suppression mode for ArangoDB
+2022-11-18 15:04:59,187 - INFO - Overhead is 0.0025103092193603516
+2022-11-18 15:04:59,492 - INFO - Profiler initialized for ArangoDB with pids [40232]
+2022-11-18 15:04:59,492 - INFO - Profiler started
+2022-11-18 15:04:59,492 - INFO - Adding 3000 nodes to ArangoDB
+2022-11-18 15:05:02,847 - INFO - Profiler stopped
+2022-11-18 15:05:02,847 - INFO - Benchmark bench_add_single_node with ArangoDB finished in 2.4214658737182617
+2022-11-18 15:05:02,847 - INFO - CPU average: 0.5333333333333333 %, MEM average: 167.69270833333334 MB
+2022-11-18 15:05:02,847 - INFO - Starting benchmark bench_add_single_node with ArangoDB
+2022-11-18 15:05:02,847 - INFO - Entering suppression mode for ArangoDB
+2022-11-18 15:05:02,847 - INFO - Adding 4000 nodes to ArangoDB
+2022-11-18 15:05:02,851 - INFO - Exiting suppression mode for ArangoDB
+2022-11-18 15:05:02,851 - INFO - Overhead is 0.003748178482055664
+2022-11-18 15:05:03,188 - INFO - Profiler initialized for ArangoDB with pids [40232]
+2022-11-18 15:05:03,188 - INFO - Profiler started
+2022-11-18 15:05:03,188 - INFO - Adding 4000 nodes to ArangoDB
+2022-11-18 15:05:06,532 - INFO - Profiler stopped
+2022-11-18 15:05:06,532 - INFO - Benchmark bench_add_single_node with ArangoDB finished in 3.2323691844940186
+2022-11-18 15:05:06,532 - INFO - CPU average: 1.0333333333333334 %, MEM average: 168.2421875 MB
+2022-11-18 15:05:06,532 - INFO - Starting benchmark bench_add_single_node with ArangoDB
+2022-11-18 15:05:06,532 - INFO - Entering suppression mode for ArangoDB
+2022-11-18 15:05:06,532 - INFO - Adding 5000 nodes to ArangoDB
+2022-11-18 15:05:06,537 - INFO - Exiting suppression mode for ArangoDB
+2022-11-18 15:05:06,537 - INFO - Overhead is 0.005045890808105469
+2022-11-18 15:05:06,869 - INFO - Profiler initialized for ArangoDB with pids [40232]
+2022-11-18 15:05:06,870 - INFO - Profiler started
+2022-11-18 15:05:06,870 - INFO - Adding 5000 nodes to ArangoDB
+2022-11-18 15:05:11,318 - INFO - Profiler stopped
+2022-11-18 15:05:11,318 - INFO - Benchmark bench_add_single_node with ArangoDB finished in 4.032783508300781
+2022-11-18 15:05:11,318 - INFO - CPU average: 0.0 %, MEM average: 169.0 MB
+2022-11-18 15:05:11,318 - INFO - Starting benchmark bench_add_single_node with ArangoDB
+2022-11-18 15:05:11,318 - INFO - Entering suppression mode for ArangoDB
+2022-11-18 15:05:11,318 - INFO - Adding 6000 nodes to ArangoDB
+2022-11-18 15:05:11,325 - INFO - Exiting suppression mode for ArangoDB
+2022-11-18 15:05:11,325 - INFO - Overhead is 0.006998777389526367
+2022-11-18 15:05:11,653 - INFO - Profiler initialized for ArangoDB with pids [40232]
+2022-11-18 15:05:11,653 - INFO - Profiler started
+2022-11-18 15:05:11,653 - INFO - Adding 6000 nodes to ArangoDB
+2022-11-18 15:05:17,254 - INFO - Profiler stopped
+2022-11-18 15:05:17,254 - INFO - Benchmark bench_add_single_node with ArangoDB finished in 4.831016540527344
+2022-11-18 15:05:17,254 - INFO - CPU average: 5.880000000000001 %, MEM average: 169.86640625 MB
+2022-11-18 15:05:17,254 - INFO - Starting benchmark bench_add_single_node with ArangoDB
+2022-11-18 15:05:17,254 - INFO - Entering suppression mode for ArangoDB
+2022-11-18 15:05:17,254 - INFO - Adding 7000 nodes to ArangoDB
+2022-11-18 15:05:17,261 - INFO - Exiting suppression mode for ArangoDB
+2022-11-18 15:05:17,261 - INFO - Overhead is 0.0070149898529052734
+2022-11-18 15:05:17,564 - INFO - Profiler initialized for ArangoDB with pids [40232]
+2022-11-18 15:05:17,565 - INFO - Profiler started
+2022-11-18 15:05:17,565 - INFO - Adding 7000 nodes to ArangoDB
+2022-11-18 15:05:24,266 - INFO - Profiler stopped
+2022-11-18 15:05:24,266 - INFO - Benchmark bench_add_single_node with ArangoDB finished in 5.624746084213257
+2022-11-18 15:05:24,266 - INFO - CPU average: 5.433333333333334 %, MEM average: 170.86653645833334 MB
+2022-11-18 15:05:24,266 - INFO - Starting benchmark bench_add_single_node with ArangoDB
+2022-11-18 15:05:24,266 - INFO - Entering suppression mode for ArangoDB
+2022-11-18 15:05:24,266 - INFO - Adding 8000 nodes to ArangoDB
+2022-11-18 15:05:24,274 - INFO - Exiting suppression mode for ArangoDB
+2022-11-18 15:05:24,274 - INFO - Overhead is 0.007512092590332031
+2022-11-18 15:05:24,613 - INFO - Profiler initialized for ArangoDB with pids [40232]
+2022-11-18 15:05:24,613 - INFO - Profiler started
+2022-11-18 15:05:24,613 - INFO - Adding 8000 nodes to ArangoDB
+2022-11-18 15:05:31,310 - INFO - Profiler stopped
+2022-11-18 15:05:31,310 - INFO - Benchmark bench_add_single_node with ArangoDB finished in 6.438950300216675
+2022-11-18 15:05:31,310 - INFO - CPU average: 0.0 %, MEM average: 171.94596354166666 MB
+2022-11-18 15:05:31,310 - INFO - Starting benchmark bench_add_single_node with ArangoDB
+2022-11-18 15:05:31,310 - INFO - Entering suppression mode for ArangoDB
+2022-11-18 15:05:31,310 - INFO - Adding 9000 nodes to ArangoDB
+2022-11-18 15:05:31,320 - INFO - Exiting suppression mode for ArangoDB
+2022-11-18 15:05:31,320 - INFO - Overhead is 0.009380340576171875
+2022-11-18 15:05:31,646 - INFO - Profiler initialized for ArangoDB with pids [40232]
+2022-11-18 15:05:31,647 - INFO - Profiler started
+2022-11-18 15:05:31,647 - INFO - Adding 9000 nodes to ArangoDB
+2022-11-18 15:05:39,473 - INFO - Profiler stopped
+2022-11-18 15:05:39,473 - INFO - Benchmark bench_add_single_node with ArangoDB finished in 7.263586521148682
+2022-11-18 15:05:39,473 - INFO - CPU average: 3.314285714285714 %, MEM average: 173.27064732142858 MB
+2022-11-18 15:05:39,473 - INFO - Starting benchmark bench_add_single_node with ArangoDB
+2022-11-18 15:05:39,473 - INFO - Entering suppression mode for ArangoDB
+2022-11-18 15:05:39,473 - INFO - Adding 10000 nodes to ArangoDB
+2022-11-18 15:05:39,482 - INFO - Exiting suppression mode for ArangoDB
+2022-11-18 15:05:39,482 - INFO - Overhead is 0.00905466079711914
+2022-11-18 15:05:39,832 - INFO - Profiler initialized for ArangoDB with pids [40232]
+2022-11-18 15:05:39,832 - INFO - Profiler started
+2022-11-18 15:05:39,832 - INFO - Adding 10000 nodes to ArangoDB
+2022-11-18 15:05:48,760 - INFO - Profiler stopped
+2022-11-18 15:05:48,760 - INFO - Benchmark bench_add_single_node with ArangoDB finished in 8.112043142318726
+2022-11-18 15:05:48,760 - INFO - CPU average: 6.5875 %, MEM average: 174.765625 MB
+2022-11-18 15:05:48,760 - INFO - Saving data to Results/bench_add_single_node_ArangoDB_iter_2022-11-18_15-05-48.bench
+2022-11-18 15:05:48,761 - INFO - Starting benchmark bench_add_single_node with OrientDB
+2022-11-18 15:05:48,761 - INFO - Entering suppression mode for OrientDB
+2022-11-18 15:05:48,761 - INFO - Adding 1000 nodes to OrientDB
+2022-11-18 15:05:48,762 - INFO - Exiting suppression mode for OrientDB
+2022-11-18 15:05:48,762 - INFO - Overhead is 0.0010001659393310547
+2022-11-18 15:05:49,090 - INFO - Profiler initialized for OrientDB with pids [18328, 43892]
+2022-11-18 15:05:49,090 - INFO - Profiler started
+2022-11-18 15:05:49,091 - INFO - Adding 1000 nodes to OrientDB
+2022-11-18 15:05:51,225 - INFO - Profiler stopped
+2022-11-18 15:05:51,225 - INFO - Benchmark bench_add_single_node with OrientDB finished in 0.5435640811920166
+2022-11-18 15:05:51,225 - INFO - CPU average: 13.9 %, MEM average: 1548.8046875 MB
+2022-11-18 15:05:51,225 - INFO - Starting benchmark bench_add_single_node with OrientDB
+2022-11-18 15:05:51,225 - INFO - Entering suppression mode for OrientDB
+2022-11-18 15:05:51,225 - INFO - Adding 2000 nodes to OrientDB
+2022-11-18 15:05:51,226 - INFO - Exiting suppression mode for OrientDB
+2022-11-18 15:05:51,226 - INFO - Overhead is 0.0015048980712890625
+2022-11-18 15:05:51,549 - INFO - Profiler initialized for OrientDB with pids [18328, 43892]
+2022-11-18 15:05:51,549 - INFO - Profiler started
+2022-11-18 15:05:51,549 - INFO - Adding 2000 nodes to OrientDB
+2022-11-18 15:05:53,677 - INFO - Profiler stopped
+2022-11-18 15:05:53,677 - INFO - Benchmark bench_add_single_node with OrientDB finished in 0.6719286441802979
+2022-11-18 15:05:53,677 - INFO - CPU average: 29.2 %, MEM average: 1524.4140625 MB
+2022-11-18 15:05:53,677 - INFO - Starting benchmark bench_add_single_node with OrientDB
+2022-11-18 15:05:53,677 - INFO - Entering suppression mode for OrientDB
+2022-11-18 15:05:53,677 - INFO - Adding 3000 nodes to OrientDB
+2022-11-18 15:05:53,679 - INFO - Exiting suppression mode for OrientDB
+2022-11-18 15:05:53,680 - INFO - Overhead is 0.001984834671020508
+2022-11-18 15:05:53,977 - INFO - Profiler initialized for OrientDB with pids [18328, 43892]
+2022-11-18 15:05:53,977 - INFO - Profiler started
+2022-11-18 15:05:53,977 - INFO - Adding 3000 nodes to OrientDB
+2022-11-18 15:05:56,099 - INFO - Profiler stopped
+2022-11-18 15:05:56,099 - INFO - Benchmark bench_add_single_node with OrientDB finished in 0.936579704284668
+2022-11-18 15:05:56,099 - INFO - CPU average: 26.6 %, MEM average: 1521.0078125 MB
+2022-11-18 15:05:56,099 - INFO - Starting benchmark bench_add_single_node with OrientDB
+2022-11-18 15:05:56,099 - INFO - Entering suppression mode for OrientDB
+2022-11-18 15:05:56,099 - INFO - Adding 4000 nodes to OrientDB
+2022-11-18 15:05:56,104 - INFO - Exiting suppression mode for OrientDB
+2022-11-18 15:05:56,104 - INFO - Overhead is 0.0050046443939208984
+2022-11-18 15:05:56,436 - INFO - Profiler initialized for OrientDB with pids [18328, 43892]
+2022-11-18 15:05:56,436 - INFO - Profiler started
+2022-11-18 15:05:56,436 - INFO - Adding 4000 nodes to OrientDB
+2022-11-18 15:05:58,569 - INFO - Profiler stopped
+2022-11-18 15:05:58,569 - INFO - Benchmark bench_add_single_node with OrientDB finished in 1.1329882144927979
+2022-11-18 15:05:58,569 - INFO - CPU average: 57.0 %, MEM average: 1526.26171875 MB
+2022-11-18 15:05:58,569 - INFO - Starting benchmark bench_add_single_node with OrientDB
+2022-11-18 15:05:58,569 - INFO - Entering suppression mode for OrientDB
+2022-11-18 15:05:58,569 - INFO - Adding 5000 nodes to OrientDB
+2022-11-18 15:05:58,573 - INFO - Exiting suppression mode for OrientDB
+2022-11-18 15:05:58,573 - INFO - Overhead is 0.004000663757324219
+2022-11-18 15:05:58,885 - INFO - Profiler initialized for OrientDB with pids [18328, 43892]
+2022-11-18 15:05:58,885 - INFO - Profiler started
+2022-11-18 15:05:58,885 - INFO - Adding 5000 nodes to OrientDB
+2022-11-18 15:06:01,022 - INFO - Profiler stopped
+2022-11-18 15:06:01,022 - INFO - Benchmark bench_add_single_node with OrientDB finished in 1.3035178184509277
+2022-11-18 15:06:01,022 - INFO - CPU average: 18.5 %, MEM average: 1532.39453125 MB
+2022-11-18 15:06:01,022 - INFO - Starting benchmark bench_add_single_node with OrientDB
+2022-11-18 15:06:01,022 - INFO - Entering suppression mode for OrientDB
+2022-11-18 15:06:01,022 - INFO - Adding 6000 nodes to OrientDB
+2022-11-18 15:06:01,028 - INFO - Exiting suppression mode for OrientDB
+2022-11-18 15:06:01,028 - INFO - Overhead is 0.00601649284362793
+2022-11-18 15:06:01,351 - INFO - Profiler initialized for OrientDB with pids [18328, 43892]
+2022-11-18 15:06:01,352 - INFO - Profiler started
+2022-11-18 15:06:01,352 - INFO - Adding 6000 nodes to OrientDB
+2022-11-18 15:06:03,485 - INFO - Profiler stopped
+2022-11-18 15:06:03,485 - INFO - Benchmark bench_add_single_node with OrientDB finished in 1.484107494354248
+2022-11-18 15:06:03,485 - INFO - CPU average: 39.1 %, MEM average: 1489.50390625 MB
+2022-11-18 15:06:03,485 - INFO - Starting benchmark bench_add_single_node with OrientDB
+2022-11-18 15:06:03,485 - INFO - Entering suppression mode for OrientDB
+2022-11-18 15:06:03,485 - INFO - Adding 7000 nodes to OrientDB
+2022-11-18 15:06:03,490 - INFO - Exiting suppression mode for OrientDB
+2022-11-18 15:06:03,490 - INFO - Overhead is 0.0055124759674072266
+2022-11-18 15:06:03,825 - INFO - Profiler initialized for OrientDB with pids [18328, 43892]
+2022-11-18 15:06:03,825 - INFO - Profiler started
+2022-11-18 15:06:03,826 - INFO - Adding 7000 nodes to OrientDB
+2022-11-18 15:06:05,961 - INFO - Profiler stopped
+2022-11-18 15:06:05,961 - INFO - Benchmark bench_add_single_node with OrientDB finished in 1.7620747089385986
+2022-11-18 15:06:05,961 - INFO - CPU average: 0.0 %, MEM average: 1489.5078125 MB
+2022-11-18 15:06:05,961 - INFO - Starting benchmark bench_add_single_node with OrientDB
+2022-11-18 15:06:05,961 - INFO - Entering suppression mode for OrientDB
+2022-11-18 15:06:05,961 - INFO - Adding 8000 nodes to OrientDB
+2022-11-18 15:06:05,968 - INFO - Exiting suppression mode for OrientDB
+2022-11-18 15:06:05,968 - INFO - Overhead is 0.006510257720947266
+2022-11-18 15:06:06,292 - INFO - Profiler initialized for OrientDB with pids [18328, 43892]
+2022-11-18 15:06:06,293 - INFO - Profiler started
+2022-11-18 15:06:06,293 - INFO - Adding 8000 nodes to OrientDB
+2022-11-18 15:06:08,408 - INFO - Profiler stopped
+2022-11-18 15:06:08,408 - INFO - Benchmark bench_add_single_node with OrientDB finished in 2.003687858581543
+2022-11-18 15:06:08,408 - INFO - CPU average: 0.0 %, MEM average: 1496.31640625 MB
+2022-11-18 15:06:08,408 - INFO - Starting benchmark bench_add_single_node with OrientDB
+2022-11-18 15:06:08,408 - INFO - Entering suppression mode for OrientDB
+2022-11-18 15:06:08,408 - INFO - Adding 9000 nodes to OrientDB
+2022-11-18 15:06:08,415 - INFO - Exiting suppression mode for OrientDB
+2022-11-18 15:06:08,415 - INFO - Overhead is 0.006999969482421875
+2022-11-18 15:06:08,740 - INFO - Profiler initialized for OrientDB with pids [18328, 43892]
+2022-11-18 15:06:08,741 - INFO - Profiler started
+2022-11-18 15:06:08,741 - INFO - Adding 9000 nodes to OrientDB
+2022-11-18 15:06:12,989 - INFO - Profiler stopped
+2022-11-18 15:06:12,989 - INFO - Benchmark bench_add_single_node with OrientDB finished in 2.285444974899292
+2022-11-18 15:06:12,989 - INFO - CPU average: 1.55 %, MEM average: 1502.859375 MB
+2022-11-18 15:06:12,989 - INFO - Starting benchmark bench_add_single_node with OrientDB
+2022-11-18 15:06:12,989 - INFO - Entering suppression mode for OrientDB
+2022-11-18 15:06:12,989 - INFO - Adding 10000 nodes to OrientDB
+2022-11-18 15:06:12,997 - INFO - Exiting suppression mode for OrientDB
+2022-11-18 15:06:12,997 - INFO - Overhead is 0.007508754730224609
+2022-11-18 15:06:13,308 - INFO - Profiler initialized for OrientDB with pids [18328, 43892]
+2022-11-18 15:06:13,308 - INFO - Profiler started
+2022-11-18 15:06:13,308 - INFO - Adding 10000 nodes to OrientDB
+2022-11-18 15:06:17,573 - INFO - Profiler stopped
+2022-11-18 15:06:17,573 - INFO - Benchmark bench_add_single_node with OrientDB finished in 2.536558151245117
+2022-11-18 15:06:17,573 - INFO - CPU average: 0.75 %, MEM average: 1505.302734375 MB
+2022-11-18 15:06:17,573 - INFO - Saving data to Results/bench_add_single_node_OrientDB_iter_2022-11-18_15-06-17.bench
+2022-11-20 17:17:12,413 - WARNING - Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000017022245030>: Failed to establish a new connection: [WinError 10061] Es konnte keine Verbindung hergestellt werden, da der Zielcomputer die Verbindung verweigerte')': /_api/user/root/database

@@ -6,6 +6,7 @@ import psutil
 import time
 import datetime
 from databases import GraphDriver, NEO4j, ArangoDB, OrientDB
+from tkinter import *
 
 
 class Suppress:
@@ -160,6 +161,53 @@ def save_data(name, head, *args):
             f.write("\n")
 
 
+def selection_window():
+    benchmarks = [bench_add_single_node, bench_add_single_edge, bench_add_database, bench_get_single_node]
+    databases = [NEO4j, OrientDB, ArangoDB]
+    root = Tk()
+    root.title("Benchmark")
+    # root.geometry("500x500")
+    left = Frame(root, border=1, relief=SUNKEN)
+    left.pack(side=LEFT, fill=BOTH, expand=True)
+    right = Frame(root, border=1, relief=SUNKEN)
+    right.pack(side=RIGHT, fill=BOTH, expand=True)
+    Label(left, text="Databases").pack()
+    Label(right, text="Benchmark").pack()
+    selected_bench = StringVar(root)
+    selected_bench.set(benchmarks[0].__name__)
+    OptionMenu(right, selected_bench, *[b.__name__ for b in benchmarks]).pack()
+    selected_dbs = []
+    for db in databases:
+        selected_dbs.append(IntVar())
+        Checkbutton(left, text=db.__str__(None), variable=selected_dbs[-1]).pack()
+    Button(left, text="Start", command=root.destroy).pack(side=BOTTOM, fill=X)
+
+    def iterate_cb():
+        if iterate.get():
+            b_steps.config(state=NORMAL)
+            b_factor.config(state=NORMAL)
+        else:
+            b_steps.config(state=DISABLED)
+            b_factor.config(state=DISABLED)
+
+    iterate = IntVar()
+    b_iterate = Checkbutton(right, text="Iterate", variable=iterate, command=iterate_cb)
+    b_iterate.pack()
+
+    Label(right, text="Number of Steps:").pack()
+    steps = IntVar()
+    b_steps = Entry(right, textvariable=steps, state=DISABLED)
+    b_steps.pack()
+
+    Label(right, text="Factor:").pack()
+    factor = IntVar()
+    b_factor = Entry(right, textvariable=factor, state=DISABLED)
+    b_factor.pack()
+    root.mainloop()
+    return selected_bench.get(), [databases[i] for i in range(len(databases)) if selected_dbs[i].get()], \
+           iterate.get(), steps.get(), factor.get()
+
+
 if __name__ == "__main__":
     logging.basicConfig(filename="benchmark.log", level=logging.INFO,
                         format="%(asctime)s - %(levelname)s - %(message)s")
@@ -167,51 +215,34 @@ if __name__ == "__main__":
     error = logging.error
     logging.getLogger().addHandler(logging.StreamHandler(sys.stdout))
 
-    do_neo4j = False
-    do_arango = False
-    do_orient = True
+    settings = selection_window()
+
     d_neo4j = None
     d_arango = None
     d_orient = None
+    for db in settings[1]:
+        if db == NEO4j:
+            try:
+                d_neo4j = NEO4j("bolt://localhost:7687", "neo4j", "1234")
+                d_neo4j.clear()
+            except Exception as e:
+                error(f"Could not connect to Neo4j: {e}")
+        elif db == ArangoDB:
+            try:
+                d_arango = ArangoDB("http://localhost:8529", "root", "arango")
+                d_arango.clear()
+            except Exception as e:
+                error(f"Could not connect to ArangoDB: {e}")
+        elif db == OrientDB:
+            try:
+                d_orient = OrientDB("localhost", "root", "orient")
+                d_orient.clear()
+            except Exception as e:
+                error(f"Could not connect to OrientDB: {e}")
 
-    if do_neo4j:
-        try:
-            d_neo4j = NEO4j("bolt://localhost:7687", "neo4j", "1234")
-            d_neo4j.clear()
-        except Exception as e:
-            error(f"Could not connect to Neo4j: {e}")
-
-    if do_arango:
-        try:
-            d_arango = ArangoDB("http://localhost:8529", "root", "arango")
-            d_arango.clear()
-        except Exception as e:
-            error(f"Could not connect to ArangoDB: {e}")
-
-    if do_orient:
-        try:
-            d_orient = OrientDB("localhost", "root", "orient")
-            d_orient.clear()
-        except Exception as e:
-            error(f"Could not connect to OrientDB: {e}")
-            d_orient = None
-
-    if d_neo4j:
-        perform_bench(bench_add_single_node, d_neo4j, size=10000)
-        perform_bench(bench_add_single_edge, d_neo4j, size=1000)
-        # perform_bench(bench_add_database, d_neo4j, path_node="data/nodes.csv", path_edge="data/edges.csv")
-        perform_bench(bench_get_single_node, d_neo4j, size=1000)
-
-    if d_arango:
-        perform_bench(bench_add_single_node, d_arango, size=10000)
-        perform_bench(bench_add_single_edge, d_arango, size=1000)
-        # perform_bench(bench_add_database, d_arango, path_node="data/nodes.csv", path_edge="data/edges.csv")
-        perform_bench(bench_get_single_node, d_arango, size=1000)
-
-    if d_orient:
-        iterate_bench(bench_add_single_node, d_orient, size=[i * 10000 for i in range(1, 11)])
-
-        # perform_bench(bench_add_single_node, d_orient, size=10000)
-        # perform_bench(bench_add_single_edge, d_orient, size=1000)
-        # perform_bench(bench_add_database, d_orient, path_node="data/nodes.csv", path_edge="data/edges.csv")
-        # perform_bench(bench_get_single_node, d_orient, size=1000)
+    for db in [d_neo4j, d_arango, d_orient]:
+        if db is not None:
+            if settings[2]:
+                iterate_bench(globals()[settings[0]], db, size=[i * settings[4] for i in range(1, settings[3] + 1)])
+            else:
+                perform_bench(globals()[settings[0]], db)
