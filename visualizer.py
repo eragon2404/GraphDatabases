@@ -21,13 +21,16 @@ def show_single_bench(path: str, to_show: list):
     plt.show()
 
 
-def show_multiple_bench(paths: tuple[str], to_show: list):
+def show_multiple_bench(paths: tuple[str], to_show: list, use_avg: bool):
     db_names = []
-    for path in paths:
-        for db in ["Arango", "NEO4j", "Orient", "TigerGraph"]:
+    paths_ = []
+    for db in ["Orient", "Arango", "NEO4j"]:
+        for path in paths:
             if db in path:
                 db_names.append(db)
+                paths_.append(path)
                 break
+    paths = paths_
     for val in to_show:
         for i, path in enumerate(paths):
             with open(path, "r") as f:
@@ -39,11 +42,14 @@ def show_multiple_bench(paths: tuple[str], to_show: list):
                 for line in f:
                     data.append(float(line.strip().split(",")[index_d]))
                     x_axis.append(float(line.strip().split(",")[index_x]))
-
-            plt.plot(x_axis, data, label=db_names[i])
-        plt.xlabel([h for h in head if h[0] == "_"][0][1:])
+            if use_avg:
+                plt.bar(db_names[i], sum(data) / len(data))
+            else:
+                plt.plot(x_axis, data, label=db_names[i])
+        if not use_avg:
+            plt.xlabel([h for h in head if h[0] == "_"][0][1:])
+            plt.legend()
         plt.ylabel(val)
-        plt.legend()
         plt.show()
 
 
@@ -53,14 +59,16 @@ def select_window(values: list):
     root.geometry("200x200")
     root.attributes("-topmost", True)
     selected = []
+    use_avg = IntVar()
     for i, v in enumerate(values):
         var = IntVar()
         Checkbutton(root, text=v, variable=var).grid(row=i, sticky=W)
         selected.append(var)
+    Checkbutton(root, text="Use average", variable=use_avg).grid(row=len(values), sticky=W)
     Button(root, text="OK", command=root.destroy).grid(row=len(values) + 1, sticky=W)
     root.update()
     root.mainloop()
-    return [value for value, var in zip(values, selected) if var.get() == 1]
+    return [value for value, var in zip(values, selected) if var.get() == 1], use_avg.get() == 1
 
 
 if __name__ == "__main__":
@@ -80,10 +88,11 @@ if __name__ == "__main__":
                     if val not in to_plot:
                         to_plot.append(val)
     print(to_plot)
-    to_plot = select_window(to_plot)
+    to_plot, use_avg = select_window(to_plot)
     print(to_plot)
     if len(paths) == 1:
         show_single_bench(paths[0], to_plot)
     elif len(paths) > 1:
-        show_multiple_bench(paths, to_plot)
+        show_multiple_bench(paths, to_plot, use_avg)
+    else:
         pass

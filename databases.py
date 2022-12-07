@@ -69,14 +69,13 @@ class NEO4j(GraphDriver):
 
     def load_database(self, path_nodes: str, path_edges: str):
         with open(path_nodes, "r") as f:
-            n_properties = f.readline().strip().split(",")
+            for line in f:
+                nid = int(line.strip())
+                self.add_node(nid, ["test"], {"test": "test"})
         with open(path_edges, "r") as f:
-            e_properties = f.readline().strip().split(",")
-        self.query(f"LOAD CSV WITH HEADERS FROM 'file:///{path_nodes}' AS row "
-                   f"CREATE (n {{ {', '.join([f'{p}: row.{p}' for p in n_properties])} }})")
-        self.query(f"LOAD CSV WITH HEADERS FROM 'file:///{path_edges}' AS row "
-                   f"MATCH (a), (b) WHERE a.id = row.src AND b.id = row.dst "
-                   f"CREATE (a)-[:{':'.join(e_properties)}]->(b)")
+            for line in f:
+                src, dst = line.strip().split("\t")
+                self.add_edge(src, dst, ["test"], {"test": "test"})
 
     def close(self):
         self.driver.close()
@@ -148,6 +147,16 @@ class ArangoDB(GraphDriver):
         q += " RETURN n"
         return self.query(q)
 
+    def load_database(self, path_nodes: str, path_edges: str):
+        with open(path_nodes, "r") as f:
+            for line in f:
+                nid = int(line.strip())
+                self.add_node(nid, ["test"], {"test": "test"})
+        with open(path_edges, "r") as f:
+            for line in f:
+                src, dst = line.strip().split("\t")
+                self.add_edge(src, dst, ["test"], {"test": "test"})
+
     def get_pids(self):
         return [p.pid for p in psutil.process_iter() if p.name() == "arangod.exe"]
 
@@ -162,13 +171,18 @@ class OrientDB(GraphDriver):
         self.client.set_session_token(True)
         self.session_id = self.client.connect(user, password)
         if "benchmark" not in self.client.db_list().oRecordData["databases"].keys():
-            self.client.db_create("benchmark", pyorient.DB_TYPE_GRAPH, pyorient.STORAGE_TYPE_MEMORY)
+            self.client.db_create("benchmark", pyorient.DB_TYPE_GRAPH, pyorient.STORAGE_TYPE_PLOCAL)
         self.client.db_open("benchmark", user, password)
 
     def query(self, q):
         res = None
         if not self._suppressed:
-            res = self.client.command(q)
+            try:
+                res = self.client.command(q)
+            except pyorient.exceptions.PyOrientCommandException:
+                pass
+            except TimeoutError:
+                print("Timeout")
         return res
 
     def clear(self):
@@ -191,6 +205,16 @@ class OrientDB(GraphDriver):
         q = "SELECT FROM V WHERE "
         q += " AND ".join([f"{k} = \"{v}\"" for k, v in properties.items()])
         return self.query(q)
+
+    def load_database(self, path_nodes: str, path_edges: str):
+        with open(path_nodes, "r") as f:
+            for line in f:
+                nid = int(line.strip())
+                self.add_node(nid, ["test"], {"test": "test"})
+        with open(path_edges, "r") as f:
+            for line in f:
+                src, dst = line.strip().split("\t")
+                self.add_edge(src, dst, ["test"], {"test": "test"})
 
     def get_pids(self):
         return [p.pid for p in psutil.process_iter() if p.name() == "java.exe" and

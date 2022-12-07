@@ -5,3 +5,4 @@ db = conn["test"]
 
 print(db)
 res = db.AQLQuery("INSERT { name: \"test\" }")
+pass
