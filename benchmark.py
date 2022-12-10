@@ -101,7 +101,8 @@ def bench_add_single_edge(database: GraphDriver, size=1000):
         database.add_edge(src=f"{i}", dst=f"{i + 1}", labels=["test"], properties={"name": f"test{i}"})
 
 
-def bench_add_database(database: GraphDriver, path_node: str = "data_sets/Wiki-VoteN.txt", path_edge: str = "data_sets/Wiki-VoteE.txt"):
+def bench_add_database(database: GraphDriver, path_node: str = "data_sets/Wiki-VoteN.txt",
+                       path_edge: str = "data_sets/Wiki-VoteE.txt"):
     info(f"Adding database from {path_node} and {path_edge} to {database}")
     if database:
         database.load_database(path_node, path_edge)
@@ -112,6 +113,33 @@ def bench_get_single_node(database: GraphDriver, size=1000):
     for i in range(size):
         if database:
             database.get_single_node(labels=["test"], properties={"name": f"test{i}"})
+
+
+def create_gird_graph(database: GraphDriver, size=150):
+    info(f"Creating grid graph with {size} nodes in {database}")
+    # create a graph with size * size nodes using a grid structure
+    for i in range(size ** 2):
+        database.add_node(nid=i, labels=["test"], properties={"name": f"test{i}"})
+    for i in range(size ** 2):
+
+        if i % size != size - 1:
+            database.add_edge(src=f"{i}", dst=f"{i + 1}", labels=["test"], properties={"name": f"test{i}"})
+
+        if i < size ** 2 - size:
+            database.add_edge(src=f"{i}", dst=f"{i + size}", labels=["test"], properties={"name": f"test{i}"})
+
+
+def bench_traversal(database: GraphDriver, start_node=1, size=10):
+    hops = size
+    info(f"Starting traversal from {start_node} with {hops} hops in {database}")
+    if database:
+        database.get_nodes_hops(start_node, hops)
+
+
+def bench_spp(database: GraphDriver, start_node=1, size=10):
+    info(f"Starting shortest path from {start_node} with length {size} in {database}")
+    if database:
+        database.ssp(start_node, 151 * size)
 
 
 def bench_idle_usage(database: GraphDriver, duration=60):
@@ -179,8 +207,8 @@ def save_data(name, head, *args):
 
 
 def selection_window():
-    benchmarks = [bench_add_single_node, bench_add_single_edge,
-                  bench_add_database, bench_get_single_node, bench_idle_usage]
+    benchmarks = [bench_add_single_node, bench_add_single_edge, bench_add_database, bench_get_single_node,
+                  bench_idle_usage, bench_traversal, create_gird_graph, bench_spp]
     databases = [NEO4j, OrientDB, ArangoDB]
     root = Tk()
     root.title("Benchmark")

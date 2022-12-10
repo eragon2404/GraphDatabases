@@ -17,6 +17,12 @@ class GraphDriver:
     def get_single_node(self, labels: list[str], properties: dict):
         raise NotImplementedError
 
+    def get_nodes_hops(self, node_id: int, hops: int):
+        raise NotImplementedError
+
+    def ssp(self, src: int, dst: int):
+        raise NotImplementedError
+
     def load_database(self, path_nodes: str, path_edges: str):
         raise NotImplementedError
 
@@ -67,6 +73,14 @@ class NEO4j(GraphDriver):
         q += ") RETURN n"
         return self.query(q)
 
+    def get_nodes_hops(self, node_id, hops):
+        q = f"MATCH (n)-[*1..{hops}]->(m) WHERE n.id = \"{node_id}\" RETURN DISTINCT m"
+        return self.query(q)
+
+    def ssp(self, src, dst):
+        q = f"MATCH p=shortestPath((a)-[*]->(b)) WHERE a.id = \"{src}\" AND b.id = \"{dst}\" RETURN p"
+        return self.query(q)
+
     def load_database(self, path_nodes: str, path_edges: str):
         with open(path_nodes, "r") as f:
             for line in f:
@@ -110,6 +124,8 @@ class ArangoDB(GraphDriver):
             self.db.createCollection(name="nodes")
         if "edges" not in self.db.collections:
             self.db.createCollection(name="edges", className="Edges")
+        if "benchgraph" not in self.db.graphs:
+            self.query("GRAPH_CREATE('benchgraph', ['nodes', 'edges'])")
 
     def query(self, q):
         res = None
@@ -156,6 +172,17 @@ class ArangoDB(GraphDriver):
             for line in f:
                 src, dst = line.strip().split("\t")
                 self.add_edge(src, dst, ["test"], {"test": "test"})
+
+    def get_nodes_hops(self, node_id, hops):
+        q = f"LET vertex = (FOR v IN nodes FILTER v.id == \"{node_id}\" RETURN v) FOR v, e, p IN 1..{hops} " \
+            f"OUTBOUND vertex[0] GRAPH 'benchgraph' OPTIONS {{order:\"bfs\", uniqueVertices:\"global\"}} RETURN DISTINCT v"
+        return self.query(q)
+
+    def ssp(self, src, dst):
+        q = f"LET start = (FOR v IN nodes FILTER v.id == \"{src}\" RETURN v) " \
+            f"LET end = (FOR v IN nodes FILTER v.id == \"{dst}\" RETURN v) " \
+            f"FOR p IN OUTBOUND SHORTEST_PATH start[0] TO end[0] GRAPH benchgraph RETURN p"
+        return self.query(q)
 
     def get_pids(self):
         return [p.pid for p in psutil.process_iter() if p.name() == "arangod.exe"]
@@ -204,6 +231,14 @@ class OrientDB(GraphDriver):
     def get_single_node(self, labels: list[str], properties: dict):
         q = "SELECT FROM V WHERE "
         q += " AND ".join([f"{k} = \"{v}\"" for k, v in properties.items()])
+        return self.query(q)
+
+    def get_nodes_hops(self, node_id, hops):
+        q = f"TRAVERSE OUT() FROM (SELECT FROM V WHERE id = \"{node_id}\") MAXDEPTH {hops}"
+        return self.query(q)
+
+    def ssp(self, src, dst):
+        q = f"SELECT shortestPath((SELECT FROM V WHERE id = \"{src}\"), (SELECT FROM V WHERE id = \"{dst}\"))"
         return self.query(q)
 
     def load_database(self, path_nodes: str, path_edges: str):
