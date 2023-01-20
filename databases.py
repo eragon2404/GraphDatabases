@@ -9,34 +9,79 @@ class GraphDriver:
         self._suppressed = False
 
     def add_node(self, nid: int, labels: list[str], properties: dict):
+        """
+        Add a node to the database
+        :param nid: The id of the node
+        :param labels: The labels of the node
+        :param properties: The properties of the node
+        """
         raise NotImplementedError
 
     def add_edge(self, src: str, dst: str, labels: list[str], properties: dict):
+        """
+        Add an edge to the database
+        :param src: The source node
+        :param dst: The destination node
+        :param labels: The labels of the edge
+        :param properties: The properties of the edge
+        """
         raise NotImplementedError
 
     def get_single_node(self, labels: list[str], properties: dict):
+        """
+        Get a single node that matches the given labels and properties
+        :param labels: The labels of the node
+        :param properties: The properties of the node
+        """
         raise NotImplementedError
 
     def get_nodes_hops(self, node_id: int, hops: int):
+        """
+        Get all nodes that are at most hops away from the given node
+        :param node_id: The id of the node
+        :param hops: The number of hops
+        """
         raise NotImplementedError
 
     def ssp(self, src: int, dst: int):
+        """
+        Get the shortest path between two nodes
+        :param src: The source node
+        :param dst: The destination node
+        """
         raise NotImplementedError
 
     def load_database(self, path_nodes: str, path_edges: str):
+        """
+        Load the database from the given files
+        :param path_nodes: The path to the nodes file
+        :param path_edges: The path to the edges file
+        """
         raise NotImplementedError
 
     def get_pids(self):
+        """
+        Get the pids of the processes that are related to the database
+        """
         raise NotImplementedError
 
     def enter_suppression(self):
+        """
+        Enter suppression mode. The driver will not send any queries to the database.
+        """
         self._suppressed = True
 
     def exit_suppression(self):
+        """
+        Exit suppression mode. The driver will send queries to the database again.
+        """
         self._suppressed = False
 
 
 class NEO4j(GraphDriver):
+    """
+    Driver for Neo4j
+    """
 
     def __init__(self, uri, user, password):
         super().__init__()
@@ -113,6 +158,9 @@ class NEO4j(GraphDriver):
 
 
 class ArangoDB(GraphDriver):
+    """
+    Driver for ArangoDB
+    """
     def __init__(self, uri, user, password):
         super().__init__()
         self.conn = Connection(username=user, password=password, arangoURL=uri)
@@ -192,6 +240,9 @@ class ArangoDB(GraphDriver):
 
 
 class OrientDB(GraphDriver):
+    """
+    Driver for OrientDB
+    """
     def __init__(self, uri, user, password):
         super().__init__()
         self.client = pyorient.OrientDB(uri, 2424)

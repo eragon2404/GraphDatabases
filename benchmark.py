@@ -10,6 +10,9 @@ from tkinter import *
 
 
 class Suppress:
+    """
+    Forces the database to enter suppression mode, which means that no queries will be executed.
+    """
     def __init__(self, database: GraphDriver):
         self.database = database
 
@@ -23,7 +26,15 @@ class Suppress:
 
 
 class Profiler:
+    """
+    Monitors the CPU and memory usage of the database.
+    """
     def __init__(self, database: GraphDriver, interval, auto_start=True):
+        """
+        :param database: The database to monitor
+        :param interval: The interval in seconds between each measurement
+        :param auto_start: Whether to start the profiler automatically
+        """
         self._pids = database.get_pids()
         if not self._pids:
             error(f"No PIDs found for {database}")
@@ -90,12 +101,22 @@ class Profiler:
 
 
 def bench_add_single_node(database: GraphDriver, size=10000):
+    """
+    Adds size nodes to the database
+    :param database: The database to add the nodes to
+    :param size: Number of nodes to add
+    """
     info(f"Adding {size} nodes to {database}")
     for i in range(size):
         database.add_node(nid=i, labels=["test"], properties={"name": f"test{i}"})
 
 
 def bench_add_single_edge(database: GraphDriver, size=1000):
+    """
+    Adds size edges to the database
+    :param database: The database to add the edges to
+    :param size: Number of edges to add
+    """
     info(f"Adding {size} edges to {database}")
     for i in range(size - 1):
         database.add_edge(src=f"{i}", dst=f"{i + 1}", labels=["test"], properties={"name": f"test{i}"})
@@ -103,12 +124,23 @@ def bench_add_single_edge(database: GraphDriver, size=1000):
 
 def bench_add_database(database: GraphDriver, path_node: str = "data_sets/Wiki-VoteN.txt",
                        path_edge: str = "data_sets/Wiki-VoteE.txt"):
+    """
+    Adds the nodes and edges from the given files to the database
+    :param database: The database to add the nodes and edges to
+    :param path_node: Path to the file containing the nodes
+    :param path_edge: Path to the file containing the edges
+    """
     info(f"Adding database from {path_node} and {path_edge} to {database}")
     if database:
         database.load_database(path_node, path_edge)
 
 
 def bench_get_single_node(database: GraphDriver, size=1000):
+    """
+    queries size nodes from the database
+    :param database: The database to query the nodes from
+    :param size: Number of nodes to query
+    """
     info(f"Getting {size} nodes from {database}")
     for i in range(size):
         if database:
@@ -116,8 +148,12 @@ def bench_get_single_node(database: GraphDriver, size=1000):
 
 
 def create_gird_graph(database: GraphDriver, size=150):
+    """
+    Creates a grid graph with size * size nodes
+    :param database: The database to add the nodes and edges to
+    :param size: The size of the grid
+    """
     info(f"Creating grid graph with {size} nodes in {database}")
-    # create a graph with size * size nodes using a grid structure
     for i in range(size ** 2):
         database.add_node(nid=i, labels=["test"], properties={"name": f"test{i}"})
     for i in range(size ** 2):
@@ -130,6 +166,12 @@ def create_gird_graph(database: GraphDriver, size=150):
 
 
 def bench_traversal(database: GraphDriver, start_node=1, size=10):
+    """
+    Traverses the graph starting at start_node with size steps
+    :param database: The database to traverse
+    :param start_node: The node to start the traversal at
+    :param size: The number of steps to take
+    """
     hops = size
     info(f"Starting traversal from {start_node} with {hops} hops in {database}")
     if database:
@@ -137,17 +179,37 @@ def bench_traversal(database: GraphDriver, start_node=1, size=10):
 
 
 def bench_spp(database: GraphDriver, start_node=1, size=10):
+    """
+    Calculates the shortest path from start_node to all other nodes in the graph
+    :param database: The database to calculate the shortest path in
+    :param start_node: The node to start the shortest path at
+    :param size: The number of nodes to calculate the shortest path to
+    """
     info(f"Starting shortest path from {start_node} with length {size} in {database}")
     if database:
         database.ssp(start_node, 151 * size)
 
 
 def bench_idle_usage(database: GraphDriver, duration=60):
+    """
+    Does absolutely nothing for the given duration
+    :param database: The database to do nothing with
+    :param duration: The duration to do nothing for
+    """
     info(f"Starting idle usage for {duration} seconds with {database}")
     time.sleep(duration)
 
 
 def perform_bench(bench: callable, database, save=True, **kwargs):
+    """
+    Performs the given benchmark on the given database
+    :param bench: The benchmark to perform
+    :param database: The database to perform the benchmark on
+    :param save: Whether to save the results
+    :param kwargs: The arguments to pass to the benchmark
+    :return: The results of the benchmark
+    """
+    # Get overhead
     info(f"Starting benchmark {bench.__name__} with {database}")
     start = time.time()
     with Suppress(database):
@@ -156,6 +218,7 @@ def perform_bench(bench: callable, database, save=True, **kwargs):
     overhead = end - start
     info(f"Overhead is {overhead}")
 
+    # Perform benchmark
     profiler = Profiler(database, 0.1)
     start = time.time()
     bench(database, **kwargs)
@@ -173,6 +236,12 @@ def perform_bench(bench: callable, database, save=True, **kwargs):
 
 
 def iterate_bench(bench: callable, database, **kwargs):
+    """
+    Iterates the given benchmark on the given database
+    :param bench: The benchmark to iterate
+    :param database: The database to iterate the benchmark on
+    :param kwargs: One kwarg must be a list of values to iterate over. Rest is passed to the benchmark.
+    """
     values = []
     cpu_usage = []
     memory_usage = []
@@ -195,6 +264,12 @@ def iterate_bench(bench: callable, database, **kwargs):
 
 
 def save_data(name, head, *args):
+    """
+    Saves the given data to a csv file
+    :param name: The name of the file
+    :param head: The header of the csv file
+    :param args: The data to save
+    """
     timestamp = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
     name = f"Results/{name}_{timestamp}.bench"
     info(f"Saving data to {name}")
@@ -207,6 +282,11 @@ def save_data(name, head, *args):
 
 
 def selection_window():
+    """
+    Creates a window to select the benchmark and databases to run.
+    :return: The selected benchmark, databases, whether to iterate,
+    the amount of steps and a factor and whether to clear the databases
+    """
     benchmarks = [bench_add_single_node, bench_add_single_edge, bench_add_database, bench_get_single_node,
                   bench_idle_usage, bench_traversal, create_gird_graph, bench_spp]
     databases = [NEO4j, OrientDB, ArangoDB]

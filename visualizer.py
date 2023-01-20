@@ -3,6 +3,11 @@ from tkinter import Tk, IntVar, Checkbutton, Button, W, filedialog
 
 
 def show_single_bench(path: str, to_show: list):
+    """
+    Creates a plot of a single benchmark with the columns given in to_show.
+    :param path: path to the csv file
+    :param to_show: list of columns to show
+    """
     with open(path, "r") as f:
         head = f.readline().strip().split(",")
         data = [[] for _ in head]
@@ -22,6 +27,13 @@ def show_single_bench(path: str, to_show: list):
 
 
 def show_multiple_bench(paths: tuple[str], to_show: list, use_avg: bool):
+    """
+    Creates a plot of multiple benchmarks with the columns given in to_show.
+    Useful for comparing different databases.
+    :param paths: paths to the csv files
+    :param to_show: list of columns to show
+    :param use_avg: if True, the average of the columns is shown
+    """
     db_names = []
     paths_ = []
     for db in ["Orient", "Arango", "NEO4j"]:
@@ -54,6 +66,10 @@ def show_multiple_bench(paths: tuple[str], to_show: list, use_avg: bool):
 
 
 def select_window(values: list):
+    """
+    Creates a window with checkboxes for selecting the columns to show.
+    :param values: list of columns
+    """
     root = Tk()
     root.title("Select values")
     root.geometry("200x200")
